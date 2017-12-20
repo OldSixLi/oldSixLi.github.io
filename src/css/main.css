@@ -1,0 +1,93 @@
+body,
+html {
+    font-family: "MicroSoft YaHei";
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    position: relative;
+    padding: 35px 0;
+}
+
+.section-primary {
+    background-color: #337cbb !important;
+    color: #ffffff;
+}
+
+.text-inverse {
+    color: #ffffff;
+}
+
+
+/* 首页背景 */
+
+.head-block {
+    height: 720px;
+    width: 100%;
+    background-image: url('./../img/main-header.jpg');
+    /*规定要使用的背景图像。*/
+    background-repeat: no-repeat;
+    /*如何重复背景图像*/
+    background-size: 120% 100%;
+    /*背景图片的尺寸*/
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.three {
+    height: 300px;
+    font-size: 70px;
+    line-height: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=0, Color=#261C1C)";
+    /*IE 8*/
+    -moz-box-shadow: 0 0 3px rgba(38, 28, 28, 0.3);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 0 0 3px rgba(38, 28, 28, 0.3);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 0 3px rgba(38, 28, 28, 0.3);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#261C1C);
+    /*IE 5.5-7*/
+    background: -moz-linear-gradient(291deg, #5454FE 0, #F4F60C 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, 291deg, color-stop(0, 5454FE), color-stop(100%, F4F60C));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(291deg, #5454FE 0, #F4F60C 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(291deg, #5454FE 0, #F4F60C 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(291deg, #5454FE 0, #F4F60C 100%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    /* for IE */
+    background: linear-gradient(291deg, #5454FE 0, #F4F60C 100%);
+    /* W3C */
+}
+
+.three:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=13, Direction=0, Color=#261C1C)";
+    /*IE 8*/
+    -moz-box-shadow: 0 3px 13px 2px rgba(38, 28, 28, 0.4);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 0 3px 13px 2px rgba(38, 28, 28, 0.4);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 3px 13px 2px rgba(38, 28, 28, 0.4);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=13, Direction=135, Color=#261C1C);
+    /*IE 5.5-7*/
+    text-overflow: clip;
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.one {
+    height: 500px;
+    line-height: 500px;
+}
