@@ -1,0 +1,92 @@
+{
+  /*
+  	// Place your snippets for CSS here. Each snippet is defined under a snippet name and has a prefix, body and 
+  	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  	// same ids are connected.
+  	// Example:
+  	"Print to console": {
+  		"prefix": "log",
+  		"body": [
+  			"console.log('$1');",
+  			"$2"
+  		],
+  		"description": "Log output to console"
+  	}
+  */
+  "Background": {
+    "prefix": "bgc-➷➷➷♞",
+    "body": [
+      "    background-color: #ddd|transparent; /*背景颜色*/\r\n    background-image: url('../a.png');/*规定要使用的背景图像。*/\r\n    background-repeat:repeat|repeat-x|repeat-y| no-repeat;/*如何重复背景图像*/\r\n    background-size: 60% 50%;/*背景图片的尺寸*/\r\n    background-attachment: scroll| fixed;/*设置背景图像是否固定或者随着页面的其余部分滚动*/\r\n    background-position: center;/*规定背景图像的位置。*/\r\n    background-origin: padding-box|border-box|content-box;/*规定背景图片的定位区域。*/\r\n    background-clip: border-box|padding-box|content-box;/*规定背景的绘制区域。*/\r\n    /*background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;*/"
+    ],
+    "description": "background所有属性--马少博"
+  },
+  "主要的媒体查询": {
+    "prefix": "media-➷➷➷♞",
+    "body": [
+      "/* Smartphones (portrait and landscape) ----------- */\r\n@media only screen\r\nand (min-device-width : 320px)\r\nand (max-device-width : 480px) {\r\n/* Styles */\r\n}\r\n/* Smartphones (landscape) ----------- */\r\n@media only screen\r\nand (min-width : 321px) {\r\n/* Styles */\r\n}\r\n/* Smartphones (portrait) ----------- */\r\n@media only screen\r\nand (max-width : 320px) {\r\n/* Styles */\r\n}\r\n/* iPads (portrait and landscape) ----------- */\r\n@media only screen\r\nand (min-device-width : 768px)\r\nand (max-device-width : 1024px) {\r\n/* Styles */\r\n}\r\n/* iPads (landscape) ----------- */\r\n@media only screen\r\nand (min-device-width : 768px)\r\nand (max-device-width : 1024px)\r\nand (orientation : landscape) {\r\n/* Styles */\r\n}\r\n/* iPads (portrait) ----------- */\r\n@media only screen\r\nand (min-device-width : 768px)\r\nand (max-device-width : 1024px)\r\nand (orientation : portrait) {\r\n/* Styles */\r\n}\r\n/* Desktops and laptops ----------- */\r\n@media only screen\r\nand (min-width : 1224px) {\r\n/* Styles */\r\n}\r\n/* Large screens ----------- */\r\n@media only screen\r\nand (min-width : 1824px) {\r\n/* Styles */\r\n}\r\n/* iPhone 4 ----------- */\r\n@media\r\nonly screen and (-webkit-min-device-pixel-ratio : 1.5),\r\nonly screen and (min-device-pixel-ratio : 1.5) {\r\n/* Styles */\r\n}"
+    ],
+    "description": "针对各种设备的媒体查询"
+  },
+  "微软雅黑字体": {
+    "prefix": "yahei-➷➷➷♞",
+    "body": [
+      "font-family: \"MicroSoft YaHei\";"
+    ],
+    "description": "微软雅黑字体"
+  },
+  "超出后显示省略号": {
+    "prefix": "text-省略号-➷➷➷♞",
+    "body": [
+      "p {\r\n    width: 100%;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n  }"
+    ],
+    "description": "超出后显示省略号"
+  },
+
+  "FLEX布局": {
+    "prefix": "flex-url-布局例子 ➷➷➷♞",
+    "body": [
+      "/* 例子: http://www.ruanyifeng.com/blog/2015/07/flex-examples.html \r\n 讲解:http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html */"
+    ],
+    "description": "微软雅黑字体"
+  },
+  "Flex布局样式": {
+    "prefix": "flexbuju-➷➷➷♞",
+    "body": [
+      "/* Flex容器 */\r\n      \r\n      #main {\r\n        height: 600px;\r\n        border: 1px solid black;\r\n        margin: 0 10px;\r\n        /*Webkit 内核的浏览器，必须加上-webkit前缀。 For Safari */\r\n        display: -webkit-flex;\r\n        display: flex;\r\n        /* NOTE flex-direction属性决定主轴的方向（即项目的排列方向） */\r\n        flex-direction: row;\r\n        /*  row（默认值）：主轴为水平方向，起点在左端。\r\n            row-reverse：主轴为水平方向，起点在右端。\r\n            column：主轴为垂直方向，起点在上沿。\r\n            column-reverse：主轴为垂直方向，起点在下沿。 */\r\n        /* NOTE flex-wrap属性定义，如果一条轴线排不下，如何换行 */\r\n        flex-wrap: nowrap;\r\n        /* nowrap（默认）：不换行。\r\n        wrap：换行，第一行在上方。\r\n        wrap-reverse：换行，第一行在下方。 */\r\n        /* NOTE flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 */\r\n        flex-flow: row nowrap;\r\n        /* flex-flow: <flex-direction> || <flex-wrap>; */\r\n        /* NOTE justify-content属性定义了项目在主轴上的对齐方式。 */\r\n        justify-content: center;\r\n        /*  flex-start（默认值）：左对齐\r\n            flex-end：右对齐\r\n            center： 居中\r\n            space-between：两端对齐，项目之间的间隔都相等。\r\n            space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。 */\r\n        /* NOTE align-items属性定义项目在交叉轴上如何对齐。 */\r\n        align-items: center;\r\n        /*  flex-start：交叉轴的起点对齐。\r\n            flex-end：交叉轴的终点对齐。\r\n            center：交叉轴的中点对齐。\r\n            baseline: 项目的第一行文字的基线对齐。\r\n            stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。 */\r\n        /* NOTE align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。 */\r\n        align-content: center;\r\n        /*  flex-start：与交叉轴的起点对齐。\r\n            flex-end：与交叉轴的终点对齐。\r\n            center：与交叉轴的中点对齐。\r\n            space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。\r\n            space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。\r\n            stretch（默认值）：轴线占满整个交叉轴。 */\r\n      }\r\n      /* 子项目 */\r\n      \r\n      #main div {\r\n        height: 300px;\r\n        background-color: coral;\r\n        /* 子项目相关属性设置 */\r\n        /* NOTE order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。 */\r\n        order: 0;\r\n        /* NOTE flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 */\r\n        flex-grow: 0;\r\n        /* NOTE flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。负值无效。*/\r\n        flex-shrink: 1;\r\n        /* NOTE flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。默认值为auto,可设置width */\r\n        flex-basis: 100px;\r\n        /* NOTE flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。 */\r\n        flex: 0 1 500px;\r\n        /* NOTE align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。 */\r\n        align-self: auto;\r\n        /* 可取值: auto | flex-start | flex-end | center | baseline | stretch; */\r\n      }"
+    ],
+    "description": "Flex布局"
+  },
+  "transform动效": {
+    "prefix": "transform-属性汇总-➷➷➷♞",
+    "body": [
+      "/* transition: 属性 过度 曲线 延迟; */\r\n        transition-property: all;\r\n        /* none|property */\r\n        transition-duration: .3s;\r\n        /* time */\r\n        transition-timing-function: linear;\r\n        /* |ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n) */\r\n        transition-delay: .2s;\r\n        /* time */\r\n        transform: translate(x, y) scale(x, y) rotate(angle) skew(x-angle, y-angle);\r\n        /* 具体动画变形 */\r\n        /* ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓2D/3D转换↓↓↓↓↓↓↓↓↓↓↓↓↓↓ */\r\n        transform-origin: 50% 50% 0;\r\n        /*改变被转换元素的位置。相对于XYZ轴的位置 |x-axis y-axis z-axis; */\r\n        transform-style: preserve-3d;\r\n        /*规定如何在 3D 空间中呈现被嵌套的元素。 |flat*/\r\n        perspective: number;\r\n        /* perspective定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图  |none*/\r\n        perspective-origin: 50% 50%;\r\n        /* perspective-origin 属性定义 3D 元素所基于的 X 轴和 Y 轴。该属性允许您改变 3D 元素的底部位置。 | x-axis y-axis*/\r\n        backface-visibility: visible;\r\n        /* backface-visibility 属性定义当元素不面向屏幕时是否可见。|hidden */"
+
+    ],
+    "description": "transform属性汇总"
+  },
+  "animation动画": {
+    "prefix": "animation-属性汇总-➷➷➷♞",
+    "body": [
+      "/* 所有动画属性的简写属性，除了 animation-play-state 属性。 */\r\n        animation: name duration timing-function delay iteration-count direction;\r\n        /* 规定 @keyframes 动画的名称。 */\r\n        animation-name: mymove;\r\n        /* 规定动画完成一个周期所花费的秒或毫秒。 */\r\n        animation-duration: .5s;\r\n        /* 规定动画的速度曲线。 */\r\n        animation-timing-function: linear;\r\n        /* 规定动画何时开始。 */\r\n        animation-delay: 0;\r\n        /* infinite:无限次播放 */\r\n        animation-iteration-count: n|infinite;\r\n        /* 动画是否应该轮流反向播放动画 */\r\n        animation-direction: normal|alternate;\r\n        /* 规定动画正在运行还是暂停。 */\r\n        animation-play-state: paused|running;\r\n        /* none:不改变默认行为;forwards:最后一个属性值;backwards:应用开始属性值;both:向前和向后填充模式都被应用。 */\r\n        animation-fill-mode: none | forwards | backwards | both;"
+
+    ],
+    "description": "animation属性汇总"
+  },
+  "keyframe": {
+    "prefix": "keyframe-例子-➷➷➷♞",
+    "body": [
+      "@keyframes ${1:mymove} {\r\n        from {\r\n          height: 0;\r\n        }\r\n        to {\r\n          height: 200px;\r\n        }\r\n      }\r\n      \r\n      @-moz-keyframes ${1:mymove} {\r\n        from {\r\n          height: 0;\r\n        }\r\n        to {\r\n          height: 200px;\r\n        }\r\n      }\r\n      \r\n      @-webkit-keyframes ${1:mymove} {\r\n        from {\r\n          height: 0;\r\n        }\r\n        to {\r\n          height: 200px;\r\n        }\r\n      }\r\n      \r\n      @-o-keyframes ${1:mymove} {\r\n        from {\r\n          height: 0;\r\n        }\r\n        to {\r\n          height: 200px;\r\n        }\r\n      }"
+    ],
+    "description": "keyframe例子"
+  },
+  "vueanimation": {
+    "prefix": "transform-Vue-例子➷➷➷♞",
+    "body": [
+      ".${1:name}-enter-active {\r\n/* 动画过渡设置 */\r\ntransition: all .3s;\r\ntransform-origin: 50% 50% 0;\r\n}\r\n.${1:name}-leave-active {\r\n/* 动画过渡设置 */\r\ntransition: all .3s;\r\ntransform-origin: 50% 50% 0;\r\n}\r\n.${1:name}-leave,\r\n.${1:name}-enter-to {\r\n/* 终止,动画已完成 */\r\ntransform: scale(1, 1) translateX(0);\r\n}\r\n.${1:name}-leave-to,\r\n.${1:name}-enter {\r\n/* 起始,动画刚开始*/\r\ntransform: scale(1, 0) translateX(50%);\r\n}"
+
+    ],
+    "description": "transform-Vue-例子"
+  },
+  // 
+}

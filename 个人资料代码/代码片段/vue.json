@@ -1,0 +1,22 @@
+{
+  /*
+  	// Place your snippets for Vue here. Each snippet is defined under a snippet name and has a prefix, body and 
+  	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  	// same ids are connected.
+  	// Example:
+  	"Print to console": {
+  		"prefix": "log",
+  		"body": [
+  			"console.log('$1');",
+  			"$2"
+  		],
+  		"description": "Log output to console"
+  	}
+  */
+  "kaishi": {
+    "prefix": "kaishivuesssssss",
+    "body": "<!-- 页面描述:$1 -->\r\n<template>\r\n</template>\r\n<script>\r\n    // import { mapGetters } from 'vuex';\r\n    export default {\r\n        name: \"${2:name}\",\r\n        //对外获取的数据\r\n        props: {},\r\n        data() {\r\n            return {$3}\r\n        },\r\n        methods: {\r\n            //页面中用到的方法\r\n        },\r\n        created() {\r\n            // 创建组件实例时钩子函数\r\n        },\r\n        mounted() {\r\n            // 挂载到dom后的钩子函数\r\n        },\r\n        watch: {\r\n            //实时监控数据变化\r\n            // data(newValue, oldValue) {\r\n            // }\r\n        },\r\n        beforeRouteEnter(to, from, next) {\r\n            next(vm => {\r\n                // 每次进入页面之前进行的操作\r\n            });\r\n        },\r\n        //实时计算\r\n        computed: {\r\n            // ...mapGetters([\r\n            //     'departmentId'\r\n            // ])\r\n        },\r\n    }\r\n</script>\r\n<style scoped>\r\n</style>",
+    "description": "开始的组件生成部分"
+  }
+}

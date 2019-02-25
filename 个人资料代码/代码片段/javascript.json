@@ -1,0 +1,885 @@
+{
+  "math-相关方法": {
+    "prefix": "math-相关方法 ➷➷➷♞",
+    "body": [
+      "// var num = 9.7;\r\n// console.log(Math.ceil(num)); //向上取整\r\n// console.log(Math.floor(num)); //向下取整\r\n// console.log(Math.round(num)); //四舍五入\r\n// console.log(Math.random()); //随机返回（0,1）"
+    ],
+    "description": "math-相关方法"
+  },
+  "点阵字": {
+    "prefix": "dianzhenzi ➷➷➷♞",
+    "body": [
+      "// 点阵字 http://www.orz6.com/lattice.aspx "
+    ],
+    "description": "点阵字地址 快速生成导航文字"
+  },
+  "math-最大或最小值": {
+    "prefix": "math-max-最大或最小值 ➷➷➷♞",
+    "body": [
+      "// var arr = [1, 2, 3, 4, 5, 100, 0.1];\r\n// console.log(Math.min.apply(null, arr)); //数组中最小值\r\n// console.log(Math.max.apply(null, arr)); //数组中最大值"
+    ],
+    "description": "math-最大或最小值"
+  },
+  "自定义Tool.Alert": {
+    "prefix": "toolalert-JQ ➷➷➷♞",
+    "body": [
+      "tool.alert(\"提示\", \"${1:提示信息}\");"
+    ],
+    "description": "自定义Tool.Alert"
+  },
+  "自定义Vue.Alert": {
+    "prefix": "toolalert-Vue ➷➷➷♞",
+    "body": [
+      "this.$$alert(\r\n  \"提示\",\r\n  \"${1:提示内容}\",\r\n  function($$content) {\r\n    //点击确定按钮进行操作(YES)\r\n      $2 \r\n},\r\n  function($$content) {\r\n    //提示框显示出来之后的操作(Ready)\r\n    \r\n  }\r\n);"
+    ],
+    "description": "Vue 提示框"
+  },
+  "自定义Tool.Confirm": {
+    "prefix": "toolconfirm-JQ ➷➷➷♞",
+    "body": [
+      "tool.confirm(\r\n  \"提示\",\r\n  \"${1:提示内容}\",\r\n  function() {\r\n    //用户点击确认按钮时操作\r\n    $2\r\n  },\r\n  function() {\r\n    //用户点击取消按钮时操作\r\n    $3\r\n  });"
+    ],
+    "description": "自定义Tool.Confirm"
+  },
+  "自定义Vue.Confirm": {
+    "prefix": "toolconfirm-Vue ➷➷➷♞",
+    "body": [
+      "this.$$confirm(\r\n  \"提示\",\r\n  '${1:提示内容}',\r\n  function($$content) {\r\n    //确定按钮\r\n    $2\r\n  },\r\n  function($$content) {\r\n    //取消按钮\r\n    $3\r\n  },\r\n  function($$content) {\r\n    //ready按钮\r\n    $4\r\n  }\r\n);"
+    ],
+    "description": "Vue确认提示框"
+  },
+  "自定义ShowAlert": {
+    "prefix": "showalert ➷➷➷♞",
+    "body": [
+      "showAlert(\"${1:请修改内容}\"${2:,\r\n     function() { // 确定事件\r\n        \r\n    }},\r\n    \"${3:确定}\");"
+    ],
+    "description": "自定义ShowAlert"
+  },
+  "自定义ShowConfirm": {
+    "prefix": "showconfirm ➷➷➷♞",
+    "body": [
+      "showConfirm(\r\n    '${1:你好，恭喜通过测试！}',\r\n    function() {\r\n       //确认事件\r\n       $2\r\n    },\r\n    function() {\r\n        //取消事件\r\n    },\r\n    '${3:确定}',\r\n    '${4:取消}');"
+    ],
+    "description": "自定义ShowConfirm"
+  },
+  "JS文件说明": {
+    "prefix": "jshead ➷➷➷♞",
+    "body": [
+      "/*\r\n * ${1:功能描述}\r\n * @Author:马少博 (ma.shaobo@qq.com)\r\n * @Date: ${2:时间}\r\n * @Last Modified by: 马少博\r\n * @Last Modified time:${2:时间}\r\n */\r\n/* jshint esversion: 6 */\r\n\"use strict\""
+    ],
+    "description": "JS文件说明"
+  },
+  "jQuery ready()": {
+    "prefix": "ready ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n  $1\r\n});"
+    ],
+    "description": "ready方法"
+  },
+  "changeSelect": {
+    "prefix": "changeSelect ➷➷➷♞",
+    "body": [
+      " tool.changeSelect($(\"${1:selector}\"), false);"
+    ],
+    "description": "changeSelect"
+  },
+  "复制操作相关方法 ": {
+    "prefix": "copy-Fun ➷➷➷♞",
+    "body": [
+      "window.onload = function(event) {\r\n            var button = document.getElementById(\"toCopy\");\r\n            button.onclick = function(event) {\r\n              if (window.clipboardData) {\r\n                window.clipboardData.clearData();\r\n                clipboardData.setData(\"Text\", $.trim($(\"#copyvalue\").val()));\r\n              } else {\r\n                document.getElementById(\"copyvalue\").select();\r\n                document.execCommand(\"copy\", false, null);\r\n              }\r\n              showInfo(\"copysuccess\");\r\n            };\r\n          };"
+    ],
+    "description": "复制的JS方法"
+  },
+  "saveInfo": {
+    "prefix": "saveInfo-Set ➷➷➷♞",
+    "body": [
+      "var saveInfo = {\r\n  //文本框,下拉菜单选择值\r\n  content: $.trim($(\"#selector\").val()),\r\n  //复选框选择值\r\n  content2: $(\"[name='selector']\").val()\r\n};\r\nvar __error = [];\r\n if (saveInfo.content == \"\") {\r\n  __error.push(\"错误提示！\");\r\n}\r\nif (__error.length > 0) {\r\n  //有错误  do something\r\n  // tool.alert(\"提示\", __error.join(\"<br />\"));\r\n  return false;\r\n}"
+    ],
+    "description": "设置saveinfo的自定义代码部分"
+  },
+  "yibuqingqiu": {
+    "prefix": "ajaxpost ➷➷➷♞",
+    "body": [
+      "$.ajax({\r\n  type: \"POST\",\r\n  url: \"${1:url}\",//TODO 修改此时链接\r\n  data: ${2:saveInfo},//TODO 修改此时数据\r\n  dataType: \"json\",\r\n  success: function(data, textStatus, jqXHR) {\r\n    if (data != null && data != \"\") {\r\n      if (data.success) {\r\n        tool.alert(\"提示\", \"保存成功\");\r\n      } else {\r\n        tool.alert(\"提示\", \"保存失败\");\r\n      }\r\n      //获取到数组\r\n      var json = data;\r\n     $3 for (var i = 0; i < json.length; i++) {\r\n        //NOTE 循环操作数据 \r\n      }\r\n    } else {\r\n      //NOTE 数据为空时提示 \r\n      tool.alert(\"提示\", \"未获取到数据!\");\r\n    }\r\n  },\r\n  error: function(response) {\r\n    //NOTE 获取服务出错时提示\r\n    tool.alert(\"提示\", \"请求服务失败,请重试!\");\r\n  },\r\n  complete: function(xhr, textStatus) {\r\n    //NOTE 异步事件完成后需要操作的内容\r\n  }\r\n});"
+    ],
+    "description": "异步请求POST操作"
+  },
+  "yibuqingqiu-get": {
+    "prefix": "ajaxget ➷➷➷♞",
+    "body": [
+      "//NOTE:这个方法不能用中文参数 \r\n $.ajax({\r\n  type: \"GET\",\r\n  url: \"${1:url}\",\r\n  data: saveInfo,\r\n  dataType: \"json\",\r\n  success: function(data) {\r\n    if (data != null && data != \"\") {\r\n      if (data.success) {\r\n        tool.alert(\"提示\", \"保存成功\");\r\n      } else {\r\n        tool.alert(\"提示\", \"保存失败\");\r\n      }\r\n      //获取到数组\r\n      var json = data;\r\n      for (var i = 0; i < json.length; i++) {\r\n        //do something\r\n      }\r\n    } else {\r\n      //failed  do something\r\n    }\r\n  },\r\n  error: function(response) {\r\n    tool.alert(\"提示\", \"请求服务失败,请重试!\");\r\n  }\r\n});"
+    ],
+    "description": "异步请求GET操作"
+  },
+  "yibuqingqiu-muban": {
+    "prefix": "ajaxmuban ➷➷➷♞",
+    "body": [
+      "var ${1:jqxhr} = $.ajax({\r\n        url: \"/users/users\", //请求的接口\r\n        type: \"GET\", // 默认为GET,你可以根据需要更改\r\n        cache: true, // 默认为true,但对于script,jsonp类型为false,可以自行设置\r\n        data: {}, // 将请求参数放这里.\r\n        dataType: \"json\", // 指定想要的数据类型\r\n        statusCode: { // 如果你想处理各状态的错误的话（也可以在fail中执行错误处理方式）\r\n          404: function handler404() {\r\n            alert('未请求到接口服务');\r\n          },\r\n          500: function handler500() {\r\n            alert('接口报错');\r\n          }\r\n        }\r\n      });\r\n      ${1:jqxhr}.done(function(data) {\r\n        //成功时调用事件\r\n      });\r\n      ${1:jqxhr}.fail(function(jqXHR, textStatus) {\r\n        //处理错误数据 (在返回的Data为空时会触发此事件) \r\n        console.log(jqXHR);\r\n      });"
+    ],
+    "description": "异步请求模板方法"
+  }
+
+  ,
+  "daojishi": {
+    "prefix": "daojishi ➷➷➷♞",
+    "body": [
+      "/**\r\n  * 定时60秒循环,注意传入的对象为DOM对象\r\n  * \r\n  * @param {any} obj  DOM对象\r\n  * @returns \r\n  */\r\n var countdown = 60;\r\n function settime(obj) {\r\n   if (countdown == 0) {\r\n     obj.removeAttribute(\"disabled\");\r\n     obj.innerHTML = \"获取验证码\";\r\n     countdown = 60;\r\n     return;\r\n   } else {\r\n     obj.setAttribute(\"disabled\", true);\r\n     obj.innerHTML = \"重新发送(\" + countdown + \"s)\";\r\n     countdown--;\r\n   }\r\n   setTimeout(function() {\r\n     settime(obj)\r\n   }, 1000);\r\n }"
+    ],
+    "description": "倒计时60s操作"
+  },
+  "正则": {
+    "prefix": "zhengze-Fun ➷➷➷♞",
+    "body": [
+      "/**\r\n  * 正则校验\r\n  * \r\n  * @param {any} str 字符串\r\n  * @returns 是否有效 T/F\r\n  */\r\n function ${1:check}(str) {\r\n   if (!(${2:正则表达式}.test(str))) {\r\n     return false;\r\n   } else {\r\n     return true;\r\n   }\r\n }"
+
+    ],
+    "description": "正则校验方法"
+  },
+  "JQ height()方法说明": {
+    "prefix": "height-jQuery-说明 ➷➷➷♞",
+    "body": [
+      "// JQ height()方法说明\r\n// height():其高度范围是所匹配元素的高度height；\r\n// innerheight():其高度范围是所匹配元素的高度height+padding；\r\n// outerheight():其高度范围是所匹配元素的高度height+padding+border；\r\n// outerheight(true)其高度范围是所匹配元素的高度height+padding+border+margin；"
+    ],
+    "description": "height-jQuery-说明"
+  },
+  "height-scroll滚动方法-说明": {
+    "prefix": "height-scroll滚动方法-说明 ➷➷➷♞",
+    "body": [
+      "$(window).height(); // 获取浏览器显示区域（可视区域）的高度 ：   \r\n$(window).width(); // 获取浏览器显示区域（可视区域）的宽度 ：\r\n$(document).height(); // 获取页面的文档高度   \r\n$(document).width(); // 获取页面的文档宽度 ：\r\n$(document.body).height(); // 浏览器当前窗口文档body的高度：  \r\n$(document.body).width(); // 浏览器当前窗口文档body的宽度： \r\n$(document).scrollTop(); // 获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  \r\n$(document).scrollLeft(); // 获取滚动条到左边的垂直宽度 ：\r\n$(obj).width(); // 获取或设置元素的宽度：\r\n$(obj).height(); // 获取或设置元素的高度：\r\nobj.offset().top; // 某个元素的上边界到body最顶部的距离： （在元素的包含元素不含滚动条的情况下）\r\nobj.offset().left; // 某个元素的左边界到body最左边的距离：（在元素的包含元素不含滚动条的情况下）\r\nobj.offset().top // 返回当前元素的上边界到它的包含元素的上边界的偏移量：（在元素的包含元素含滚动条的情况下）\r\nobj.offset().left // 返回当前元素的左边界到它的包含元素的左边界的偏移量：（在元素的包含元素含滚动条的情况下）"
+    ],
+    "description": "height-scroll滚动方法-说明"
+  },
+  "trycatch语句": {
+    "prefix": "trycatch ➷➷➷♞",
+    "body": [
+      "try {　　\r\n    // 此处是可能产生例外的语句\r\n    $1\r\n  } catch (error) {　　\r\n    // 此处是负责例外处理的语句\r\n    console.log(${2:error});　　\r\n  } finally {　　\r\n    // 此处是出口语句\r\n    ${3:console.log(\"执行完毕\");}\r\n  }"
+    ],
+    "description": "trycatch语句"
+  },
+  "CONSOLE输出": {
+    "prefix": "clog ➷➷➷♞",
+    "body": [
+      "console.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");\r\nconsole.log(\"${1:TODO}\");\r\nconsole.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");"
+    ],
+    "description": "CONSOLE.LOG方法"
+  },
+  "CONSOLE输出log": {
+    "prefix": "logc-方法 ➷➷➷♞",
+    "body": [
+      "console.log(\"${1:TODO}\");"
+    ],
+    "description": "CONSOLE.log-方法(马)"
+  },
+  "CONSOLE输出log带时间": {
+    "prefix": "logtime-方法 ➷➷➷♞",
+    "body": [
+      "console.log(\r\n        new Date().getHours() +\r\n        ':' + new Date().getMinutes() +\r\n        ':' + new Date().getSeconds() + \"的值是:\" +\r\n        \"${1:TODO}\");"
+    ],
+    "description": "输出 - - 时间版"
+  },
+
+  "刷新": {
+    "prefix": "shuaxin ➷➷➷♞",
+    "body": [
+      " //刷新当前页面.\r\n window.location.reload();"
+    ],
+    "description": "当前页面刷新"
+  },
+  "FOR循环": {
+    "prefix": "forxunhuan循环 ➷➷➷♞",
+    "body": [
+      "for(var i=0;i<length;i++){\r\n     $1\r\n }"
+    ],
+    "description": "FOR循环"
+  },
+  "select2异步获取数据": {
+    "prefix": "select2 ➷➷➷♞",
+    "body": [
+      "$(\"#${1:selector}\").select2({\r\n      placeholder: '请选择',\r\n      allowClear: true,\r\n      ajax: {\r\n         \r\n        url: function(params) {\r\n          return BasicUrl + \"vip/name/\" + params.term;\r\n        },\r\n        dataType: 'json',\r\n        delay: 250,\r\n        processResults: function(data, page) {\r\n          return {\r\n            results: data\r\n          };\r\n        },\r\n        cache: false\r\n      }, \r\n      minimumInputLength: 1,\r\n      minimumResultsForSearch: 1,\r\n      width: \"220px\", //宽度设置\r\n      templateResult: formatRepo,\r\n      templateSelection: formatRepoSelection,\r\n    });\r\n    function formatRepo(repo) {\r\n      return repo.realName;\r\n    }\r\n    function formatRepoSelection(repo) {\r\n      return repo.realName;\r\n    }"
+
+    ],
+    "description": "select2异步获取数据"
+  },
+  "AJAX方法拼接table": {
+    "prefix": "table-拼接字符串 ➷➷➷♞",
+    "body": [
+      "/**\r\n * AJAX方法拼接相应模块的HTML布局 \r\n * @param {ARRAY} data 请求到的JSON数据(数组形式) \r\n * @param {int} pageindex 页码\r\n */\r\nfunction createTable(data, pageindex) {\r\n  if (data != null && data != \"\" && data.length > 0) {\r\n    var content = data;\r\n    var htmlstr = \"\";\r\n    for (var i = 0; i < content.length; i++) {\r\n      var singleDataStr = \"<tr>\";\r\n      switch (content[i].state) {\r\n        //相关操作，根据状态转换为不同的状态文字，更改数字为文字（可能用到）\r\n        case \"1\":\r\n          break;\r\n        case \"2\":\r\n          break;\r\n        default:\r\n          break;\r\n      }\r\n      //拼接单行数据操作 (需要注意页数)\r\n      singleDataStr += \"<td class='text-center'>\" + (10 * pageindex + i - 9) + \"</td>\" +\r\n        \"<td class='text-center'>\" + content[i].TODO + \"</td>\" +\r\n        \"<td class='text-center'>\" + content[i].TODO + \"</td>\" +\r\n        \"<td class='text-center'>\" + content[i].TODO + \"</td>\" +\r\n        \"<td class='text-center'>\" + content[i].TODO + \"</td>\" +\r\n        \"<td class='text-center'>\" + content[i].TODO + \"</td>\" +\r\n        \"<td class='text-center'><a class='btn btn-link' href='javascript:edit(\" + content[i].TODO + \");'>TODO操作</a></td>\" +\r\n        \"</tr>\";\r\n      htmlstr += singleDataStr;\r\n    }\r\n    $(\"#TODO\").html(htmlstr);\r\n  } else {\r\n    $(\"#TODO\").html('<tr><td colspan=\"100\" class=\"text-center notFound\">没有相关数据</td></tr> ');\r\n  }\r\n}"
+    ],
+    "description": "马少博：AJAX方法拼接相应模块的HTML布局 "
+  },
+
+  "回车事件": {
+    "prefix": "huiche--事件-javascript ➷➷➷♞",
+    "body": [
+      "// 回车事件\r\n            $(function() {\r\n              document.onkeydown = function(e) {\r\n                var ev = document.all ? window.event : e;\r\n                if (ev.keyCode == 13) {\r\n                  search();\r\n                  return false; //防止其他默认事件\r\n                }\r\n              }\r\n            });"
+    ],
+    "description": "Javascript回车事件"
+  },
+  "输入框回车事件": {
+    "prefix": "huiche-input-输入框回车事件(马) ➷➷➷♞",
+    "body": [
+      "$(\"#${1:selector}\").keydown(function(e) {\r\n  var ev = document.all ? window.event : e;\r\n  if (ev.keyCode == 13) {\r\n    //相关事件\r\n    $2\r\n    return false;\r\n  }\r\n});"
+    ],
+    "description": "Javascript回车事件"
+  },
+  "跳转": {
+    "prefix": "tiaozhuan-JSP ➷➷➷♞",
+    "body": [
+      "var goToDetail = \"http://\" + tool.getUrlArea() + \"${1:/csfwpt_console/user/advice/show}\";\r\n      window.location.href = goToDetail;"
+    ],
+    "description": "JSP页面跳转方法--马少博"
+  },
+  "时间戳转化为标准时间": {
+    "prefix": "shijianchuo-时间戳转化为标准时间 ➷➷➷♞",
+    "body": [
+      "toNormalTime(${1:shijianchuo });\r\n/**\r\n * 时间戳转化为正常时间 \r\n * @param {any} shijianchuo  时间戳 精确到毫秒\r\n * @returns 正常时间\r\n */\r\nfunction toNormalTime(shijianchuo) {\r\n  var time = new Date(parseInt(shijianchuo));\r\n  var y = time.getFullYear();\r\n  var m = time.getMonth() + 1;\r\n  var d = time.getDate();\r\n  var h = time.getHours();\r\n  var mm = time.getMinutes();\r\n  var s = time.getSeconds();\r\n  return y + '-' + add0(m) + '-' + add0(d) + ' ' + add0(h) + ':' + add0(mm) + ':' + add0(s);\r\n}\r\nfunction add0(m) { return m < 10 ? '0' + m : m; }"
+    ],
+    "description": "时间戳转化为标准时间"
+  },
+  "时间转化为时间戳": {
+    "prefix": "shijianchuo-转化为时间戳 ➷➷➷♞",
+    "body": [
+      "function toTimestamp(timestr) {\r\n  //   return new Date(timestr).setHours(0); //设置时间为一天开始\r\n  return Date.parse(new Date(timestr)).toString() == \"NaN\" ? 0 : Date.parse(new Date(timestr));\r\n}"
+    ],
+    "description": "时间戳转化为标准时间"
+  },
+
+  "分隔字符串 ": {
+    "prefix": "fenge ➷➷➷♞",
+    "body": [
+      "// ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆   \r\n// ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆\r\n// ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆\r\n// ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆"
+    ],
+    "description": "将一块块的代码分隔开"
+  },
+
+  "ChexkBox取值": {
+    "prefix": "checkbox用JQ方法取值 ➷➷➷♞",
+    "body": [
+      "var item = [];\r\n$('[name=\"${1:orderItem}\"]').each(function() {\r\n  if ($(this).is(\":checked\")) {\r\n    item.push($(this).val());\r\n  }\r\n});"
+    ],
+    "description": "checkbox用JQ方法取值"
+  },
+  "ChexkBox赋值": {
+    "prefix": "checkbox赋值 ➷➷➷♞",
+    "body": [
+      "var result = ${1:true};\r\n//对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。\r\n//对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。\r\nif (result) {\r\n  $(\"#checkAll\").prop(\"checked\", false);\r\n} else {\r\n  $(\"#checkAll\").prop('checked', 'checked');\r\n}"
+    ],
+    "description": "checkbox赋值"
+  },
+  "JS方法注释": {
+    "prefix": "zhushi-注释 ➷➷➷♞",
+    "body": [
+      "/**\r\n * ${1:判断浏览器版本} \r\n * @returns \r\n */"
+    ],
+    "description": "JS方法注释"
+  },
+
+  "chexkcox取值": {
+    "prefix": "checkbox用JavaScript方法取值 ➷➷➷♞",
+    "body": [
+      "/**\r\n * 获取多选框（CheckBox）的值 \r\n * @param {any} name 控件名称\r\n * @returns \r\n */\r\nfunction getCheckBoxValue(name) {\r\n  var obj = document.getElementsByName(name);\r\n  var s = [];\r\n  for (var i = 0; i < obj.length; i++) {\r\n    if (obj[i].checked) {\r\n      s.push(obj[i].value);\r\n    }\r\n  }\r\n  return s.join(',');\r\n}"
+    ],
+    "description": "checkbox用JavaScript方法取值"
+  },
+  "UrlSearch": {
+    "prefix": "urlsearch- ➷➷➷♞",
+    "body": [
+      "var urlObj = new UrlSearch();\r\n /**\r\n  * 分隔获取各个参数\r\n  * 根据URL地址获取其参数\r\n  */\r\n function UrlSearch() {\r\n   var name, value;\r\n   var str = location.href; //取得整个地址栏\r\n   var num = str.indexOf(\"?\");\r\n   str = str.substr(num + 1);\r\n   var arr = str.split(\"&\"); //各个参数放到数组里\r\n   for (var i = 0; i < arr.length; i++) {\r\n     num = arr[i].indexOf(\"=\");\r\n     if (num > 0) {\r\n       name = arr[i].substring(0, num);\r\n       value = arr[i].substr(num + 1);\r\n       this[name] = value;\r\n     }\r\n   }\r\n }"
+    ],
+    "description": "获取当前地址的参数"
+  },
+  "zhushi": {
+    "prefix": "zhushi注释 ➷➷➷♞",
+    "body": [
+      "/**\r\n * ${1:获取当前登录的用户的ID}\r\n * ${2:@returns}\r\n */"
+    ],
+    "description": "方法注释"
+  },
+  "提取字符串中纯数字": {
+    "prefix": "getnum-获取字符串中纯数字 ➷➷➷♞",
+    "body": [
+      "//获取纯字符串\r\n      function getNum(text) {\r\n        var value = text.replace(/[^0-9]/ig, \"\");\r\n        return value;\r\n      }"
+    ],
+    "description": "获取字符串中纯数字"
+  },
+  "生成随机数": {
+    "prefix": "suijishu-生成随机数 ➷➷➷♞",
+    "body": [
+      "/**\r\n     * 生成随机数\r\n     * \r\n     * @param {any} start 起点\r\n     * @param {any} end 终点\r\n     */\r\n    function radomNum(start, end) {\r\n      end = start > end ? [start, start = end][0] : end; //保证End最大  \r\n      //不包含起止点\r\n      return Math.round(Math.random() * (end - start - 2) + start + 1);\r\n      //包含起始点\r\n      // return Math.round(Math.random()*(end-start)+start);\r\n      //包含 start 不包含 end\r\n      // return parseInt(Math.random() * (end - start) + start, 10);\r\n      //包含end 不包含 start\r\n      // return parseInt(Math.random() * (end - start) + start + 1, 10);\r\n    }"
+    ],
+    "description": "生成随机数"
+  },
+  "替换字符串": {
+    "prefix": "tihuan-replace-替换字符串 ➷➷➷♞",
+    "body": [
+      "/**\r\n * 替换某个字符串为另外一个字符串函数\r\n * \r\n * @param {any} bigStr  全部字符\r\n * @param {any} str1 被替换的字符\r\n * @param {any} str2 新字符\r\n * @returns 新的字符串\r\n */\r\nfunction replaceAll(bigStr, str1, str2) { //把bigStr中的所有str1替换为str2\r\n  var reg = new RegExp(str1, 'gm');\r\n  return bigStr.replace(reg, str2);\r\n}"
+    ],
+    "description": "替换字符串"
+  },
+  "替换字符串中的空格": {
+    "prefix": "tihuan-trim-去除空字符串 ➷➷➷♞",
+    "body": [
+      "//去除空格  type 1-所有空格  2-前后空格  3-前空格 4-后空格\r\n//ecDo.trim('  1235asd',1)\r\n//result：1235asd\r\n//这个方法有原生的方案代替，但是考虑到有时候开发PC站需要兼容IE8，所以就还是继续保留\r\nvar trim = function (str, type) {\r\n    switch (type) {\r\n        case 1:\r\n            return str.replace(/\\/s+/g, \"\");\r\n        case 2:\r\n            return str.replace(/(^\\/s*)|(\\/s*$)/g, \"\");\r\n        case 3:\r\n            return str.replace(/(^\\/s*)/g, \"\");\r\n        case 4:\r\n            return str.replace(/(\\/s*$)/g, \"\");\r\n        default:\r\n            return str;\r\n    }\r\n}\r\n "
+    ],
+    "description": "去除空字符串"
+  },
+  "深度克隆对象": {
+    "prefix": "clone-深度克隆对象 ➷➷➷♞",
+    "body": [
+      "/**\r\n * 深度克隆对象\r\n * \r\n * @param {any} obj 对象\r\n * @returns \r\n */\r\nfunction cloneObj(obj) {\r\n  var o = obj.constructor == Object ? new obj.constructor() : new obj.constructor(obj.valueOf());\r\n  for (var key in obj) {\r\n    if (o[key] != obj[key]) {\r\n      if (typeof(obj[key]) == 'object') {\r\n        o[key] = mods.cloneObj(obj[key]);\r\n      } else {\r\n        o[key] = obj[key];\r\n      }\r\n    }\r\n  }\r\n  return o;\r\n}"
+    ],
+    "description": "深度克隆对象"
+  },
+  "操作Cookie": {
+    "prefix": "cookie-操作Cookie ➷➷➷♞",
+    "body": [
+      "/**\r\n * 设置cookie值\r\n * \r\n * @param {any} name \r\n * @param {any} value \r\n * @param {any} seconds \r\n */\r\nfunction setCookie(name, value, seconds) {\r\n  seconds = seconds || 0; //seconds有值就直接赋值，没有为0 \r\n  var expires = \"\";\r\n  if (seconds != 0) { //设置cookie生存时间\r\n    var date = new Date();\r\n    date.setTime(date.getTime() + (seconds * 1000));\r\n    expires = \"; expires=\" + date.toGMTString();\r\n  }\r\n  document.cookie = name + \"=\" + escape(value) + expires + \"; path=/\";\r\n}\r\n/**\r\n * 读取cookie\r\n * \r\n * @param {any} name \r\n * @returns \r\n */\r\nfunction getCookie(name) {\r\n  var arr, reg = new RegExp(\"(^| )\" + name + \"=([^;]*)(;|$)\");\r\n  if (arr = document.cookie.match(reg))\r\n    return unescape(arr[2]);\r\n  else\r\n    return null;\r\n}/**\r\n  * 删除cooke \r\n  * 根据名称删除\r\n  * @returns \r\n  */\r\n function delCookie(name) {\r\n   var exp = new Date();\r\n   exp.setTime(exp.getTime() - 1);\r\n   var cval = getCookie(name);\r\n   if (cval != null)\r\n     document.cookie = name + \"=\" + cval + \";expires=\" + exp.toGMTString();\r\n }"
+    ],
+    "description": "cookie的设置和读取"
+  },
+  "数组去重": {
+    "prefix": "array-数组去重 ➷➷➷♞",
+    "body": [
+      "/**\r\n * 数组去重\r\n * \r\n * @param {any} arr 去重前数组\r\n * @returns 去重后数组\r\n */\r\nfunction uniqueArr(arr) {\r\n  var result = [],\r\n    json = {};\r\n  for (var i = 0, len = arr.length; i < len; i++) {\r\n    if (!json[arr[i]]) {\r\n      json[arr[i]] = 1;\r\n      result.push(arr[i]);\r\n    }\r\n  }\r\n  return result;\r\n};"
+    ],
+    "description": "数组去重"
+  },
+  "获取页面高度": {
+    "prefix": "bodyheight-获取页面高度 ➷➷➷♞",
+    "body": [
+      "/**\r\n   * 获取当前页面中的总的高度\r\n   * \r\n   * @returns  返回高度值（Number）\r\n   */\r\nfunction getPageHeight() {\r\n  var g = document,\r\n    a = g.body,\r\n    f = g.documentElement,\r\n    d = g.compatMode == \"BackCompat\" ? a : g.documentElement;\r\n  return Math.max(f.scrollHeight, a.scrollHeight, d.clientHeight);\r\n}"
+    ],
+    "description": "获取页面高度"
+  },
+  "CheckBox全选/取消全选": {
+    "prefix": "checkbox-全选/取消全选 ➷➷➷♞",
+    "body": [
+      "$(\"#${1:selector}\").click(function() {\r\n  if (this.checked) {\r\n    $(\"input[type='checkbox'][name='${2:names}']\").each(function() { this.checked = true; });\r\n  } else {\r\n    $(\"input[type='checkbox'][name='${2:names}']\").each(function() { this.checked = false; });\r\n  }\r\n});"
+    ],
+    "description": "全选/取消全选"
+  },
+  "textarea 实现自增长": {
+    "prefix": "textarea 实现自增长 ➷➷➷♞",
+    "body": [
+      "/**\r\n       * 实现input的自增长\r\n       * @returns\r\n       */\r\n      function textareaAdapt(event) {\r\n        $(event.target).css({\r\n          'height': 'auto'\r\n        }).height(event.target.scrollHeight);\r\n      }"
+    ],
+    "description": "textarea 实现自增长"
+  },
+  "ARRAY是否包含某个值": {
+    "prefix": "isinarray ➷➷➷♞",
+    "body": [
+      "/**\r\n * \r\n * 判断当前元素是否在数组中\r\n * @param {any} element 单个元素\r\n * @param {any} arr  数组\r\n * @returns T/F\r\n */\r\nfunction isInArray(element, arr) {\r\n  for (var i = 0; i < arr.length; i++) {\r\n    if (arr[i] == element) {\r\n      return true;\r\n    }\r\n  }\r\n  return false;\r\n}"
+    ],
+    "description": "isinarray-马少博"
+  },
+  "shuzu": {
+    "prefix": "arr-数组删除 ➷➷➷♞",
+    "body": [
+      "   //数组删除的方法\r\n   ${1:arr}.splice(${2:index}, ${3:length});\r\n/**\r\n       * 数组的删除方法(根据index)\r\n       * @returns\r\n       */\r\n      Array.prototype.remove = function(from, to) {\r\n        form = form > to ? [to, to = form][0] : form;\r\n        var rest = this.slice((to || from) + 1 || this.length);\r\n        this.length = from < 0 ? this.length + from : from;\r\n        return this.push.apply(this, rest);\r\n      };"
+    ],
+    "description": "数组删除的方法"
+  },
+  "shubiao-禁用右键": {
+    "prefix": "shubiao-禁用右键 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n   //catch the right-click context menu\r\n   $(document).bind(\"contextmenu\",function(e) {               \r\n       //warning prompt - optional\r\n       alert(\"No right-clicking!\");\r\n       //delete the default context menu\r\n       return false;\r\n   });\r\n});"
+    ],
+    "description": "shubiao-禁用右键"
+  },
+  "abiaoqian-新窗口打开": {
+    "prefix": "abiaoqian-新窗口打开 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n   //select all anchor tags that have http in the href\r\n   //and apply the target=_blank\r\n   $(\"a[href^='http']\").attr('target','_blank');\r\n});"
+
+    ],
+    "description": "新窗口打开<a>标签"
+  },
+  "dingbu-滚动到顶部": {
+    "prefix": "dingbu-滚动到顶部 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n   //when the id=\"top\" link is clicked\r\n   $('#top').click(function() {\r\n       //scoll the page back to the top\r\n       $(document).scrollTo(0,500);\r\n   })\r\n});\r\n  //或 \r\n      $('a.top').click(function() {\r\n $(document.body).animate({ scrollTop: 0 }, 800);        return false;\r\n });"
+
+    ],
+    "description": "滚动到顶部"
+  },
+  "shubiao-获取鼠标位置": {
+    "prefix": "shubiao-获取鼠标位置 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n$().mousemove(function(e)\r\n{\r\n$('# MouseCoordinates ').html(\"X Axis Position = \" + e.pageX + \" and Y Axis Position = \" + e.pageY);\r\n});"
+
+    ],
+    "description": "shubiao-获取鼠标位置"
+  },
+  "img-yujiazai-预加载": {
+    "prefix": "img-yujiazai-预加载 ➷➷➷♞",
+    "body": [
+      "jQuery.preloadImagesInWebPage = function() \r\n{\r\n     for(var ctr = 0; ctr<arguments.length; ctr++)\r\n{\r\njQuery(\"<img alt=\"\">\").attr(\"src\", arguments[ctr]);\r\n}\r\n}\r\nTo use the above method, you can use the following piece of code:\r\n$.preloadImages(\"image1.gif\", \"image2.gif\", \"image3.gif\");\r\nTo check whether an image has been loaded, you can use the following piece of code:\r\n$('#imageObject').attr('src', 'image1.gif').load(function() {\r\nalert('The image has been loaded…');\r\n});"
+    ],
+    "description": "img-yujiazai-预加载"
+  },
+  "img-posun-破损图片替换": {
+    "prefix": "img-posun-破损图片替换 ➷➷➷♞",
+    "body": [
+      "$('img').on('error', function () { $(this).prop('src', 'img/broken.png'); });"
+    ],
+    "description": "img-posun-破损图片替换"
+  },
+
+  "浏览器检测": {
+    "prefix": "broswer-liulanqi-浏览器检测 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n// Target Firefox 2 and above\r\nif ($.browser.mozilla && $.browser.version >= \"1.8\" ){\r\n    // do something\r\n}\r\n// Target Safari\r\nif( $.browser.safari ){\r\n    // do something\r\n}\r\n// Target Chrome\r\nif( $.browser.chrome){\r\n    // do something\r\n}\r\n// Target Camino\r\nif( $.browser.camino){\r\n    // do something\r\n}\r\n// Target Opera\r\nif( $.browser.opera){\r\n    // do something\r\n}\r\n// Target IE6 and below\r\nif ($.browser.msie && $.browser.version <= 6 ){\r\n    // do something\r\n}\r\n// Target anything above IE6\r\nif ($.browser.msie && $.browser.version > 6){\r\n    // do something\r\n}\r\n});"
+    ],
+    "description": "浏览器检测"
+  },
+  "预加载": {
+    "prefix": "yujiazai-img-图片预加载 ➷➷➷♞",
+    "body": [
+      "$.preloadImages = function () {\r\n  for (var i = 0; i < arguments.length; i++) {\r\n    $('<img>').attr('src', arguments[i]);\r\n  }\r\n};\r\n$.preloadImages('img/hover1.png', 'img/hover2.png');"
+    ],
+    "description": "图片预加载"
+  },
+  "出错图片": {
+    "prefix": "img-error-图片错误处理 ➷➷➷♞",
+    "body": [
+      "$('img').on('error', function () {\r\n  $(this).prop('src', 'img/broken.png');\r\n});"
+    ],
+    "description": "图片错误处理"
+  },
+  "禁用 input 字段": {
+    "prefix": "disabled-input-禁用input字段 ➷➷➷♞",
+    "body": [
+      "$('input[type=\"submit\"]').prop('disabled', true);\r\n$('input[type=\"submit\"]').removeAttr('disabled');"
+    ],
+    "description": "禁用input字段"
+  },
+  "禁止链接加载": {
+    "prefix": "disabled-a-禁止链接加载 ➷➷➷♞",
+    "body": [
+      "$('a.no-link').click(function (e) {\r\n  e.preventDefault();\r\n});"
+    ],
+    "description": "禁止链接加载"
+  },
+  "让两个 DIV 高度相同": {
+    "prefix": "height-div-让两个DIV高度相同 ➷➷➷♞",
+    "body": [
+      "var $columns = $('.column');\r\nvar height = 0;\r\n$columns.each(function () {\r\n  if ($(this).height() > height) {\r\n    height = $(this).height();\r\n  }\r\n});\r\n$columns.height(height);"
+    ],
+    "description": "禁止链接加载"
+  },
+  "元素居屏幕中间位置": {
+    "prefix": "center-div-元素居屏幕中间位置 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n  jQuery.fn.center = function () {\r\n      this.css(\"position\",\"absolute\");\r\n      this.css(\"top\", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + \"px\");\r\n      this.css(\"left\", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + \"px\");\r\n      return this;\r\n  }\r\n  $(\"#id\").center();\r\n});"
+    ],
+    "description": "元素居屏幕中间位置"
+  },
+  "自定义选择器": {
+    "prefix": "selector-自定义选择器 ➷➷➷♞",
+    "body": [
+      "$(document).ready(function() {\r\n   $.extend($.expr[':'], {\r\n       moreThen1000px: function(a) {\r\n           return $(a).width() > 1000;\r\n      }\r\n   });\r\n  $('.box:moreThen1000px').click(function() {\r\n      // creating a simple js alert box\r\n      alert('The element that you have clicked is over 1000 pixels wide');\r\n  });\r\n});"
+    ],
+    "description": "自定义选择器"
+  },
+  "promise": {
+    "prefix": "newpromises-➷➷➷♞",
+    "body": [
+      "//返回一个promise对象才可以调用then等函数\r\nreturn new Promise(function(resolve, reject) {\r\n  if (${1:value}) {\r\n    resolve(${1:value});\r\n  } else {\r\n    reject(${2:error});\r\n  }\r\n});"
+    ],
+    "description": "返回一个promise实例对象--马少博"
+  },
+  "redirect": {
+    "prefix": "tiaozhuan-redirect-跳转➷➷➷♞",
+    "body": [
+      "/**\r\n * 重定向到指定的 URL。\r\n * 传递第二个参数以模拟链接单击 (true-默认值) 或 HTTP 重定向 (false)\r\n * @returns\r\n */\r\nconst redirect = (url, asLink) =>\r\n  asLink ? window.location.href = url : window.location.replace(url);\r\n// redirect('https://google.com');"
+    ],
+    "description": "跳转到一个新页面"
+  },
+  "huhuan": {
+    "prefix": "huhuan-两个数值互换➷➷➷♞",
+    "body": [
+      "var a = 0,\r\n  b = 1;\r\na = [b, b = a][0];\r\nvar a = 3,\r\n   b = 5;\r\n [a, b] = [b, a]"
+
+    ],
+    "description": "两个数值互换"
+  },
+  "排序": {
+    "prefix": "paixu-冒泡排序➷➷➷♞",
+    "body": [
+      " /**\r\n  * 冒泡排序 \r\n  * @returns \r\n  */\r\n function bubbleSort(array) {\r\n   var length = array.length,\r\n     isSwap;\r\n   for (var i = 0; i < length; i++) { //正序\r\n     isSwap = false;\r\n     for (var j = 0; j < length - 1 - i; j++) { //正序\r\n       array[j] > array[j + 1] && (isSwap = true) && swap(j, j + 1, array);\r\n     }\r\n     if (!isSwap)\r\n       break;\r\n   }\r\n   return array;\r\n }\r\n //先将交换元素部分抽象出来\r\n function swap(i, j, array) {\r\n   var temp = array[j];\r\n   array[j] = array[i];\r\n   array[i] = temp;\r\n }\r\n console.log(bothwayBubbleSort([1, 2, 4, 1, 2, 666, 4]));"
+
+    ],
+    "description": "冒泡排序"
+  },
+  "双向冒泡排序": {
+    "prefix": "paixu-双向冒泡排序➷➷➷♞",
+    "body": [
+      "/**\r\n  * 双向冒泡排序 \r\n  * @returns \r\n  */\r\n function bothwayBubbleSort(array) {\r\n   var tail = array.length - 1,\r\n     i, isSwap = false;\r\n   for (i = 0; i < tail; tail--) {\r\n     for (var j = tail; j > i; j--) { //第一轮, 先将最小的数据冒泡到前面\r\n       array[j - 1] > array[j] && (isSwap = true) && swap(j, j - 1, array);\r\n     }\r\n     i++;\r\n     for (j = i; j < tail; j++) { //第二轮, 将最大的数据冒泡到后面\r\n       array[j] > array[j + 1] && (isSwap = true) && swap(j, j + 1, array);\r\n     }\r\n   }\r\n   return array;\r\n } //先将交换元素部分抽象出来\r\n function swap(i, j, array) {\r\n   var temp = array[j];\r\n   array[j] = array[i];\r\n   array[i] = temp;\r\n }"
+
+    ],
+    "description": "双向冒泡排序"
+  },
+  "选择排序": {
+    "prefix": "paixu-选择排序➷➷➷♞",
+    "body": [
+      " /**\r\n  * 选择排序 \r\n  * @returns \r\n  */\r\n function selectSort(array) {\r\n   var length = array.length,\r\n     min;\r\n   for (var i = 0; i < length - 1; i++) {\r\n     min = i;\r\n     for (var j = i + 1; j < length; j++) {\r\n       array[j] < array[min] && (min = j); //记住最小数的下标\r\n     }\r\n     min != i && swap(i, min, array);\r\n   }\r\n   return array;\r\n }\r\n //先将交换元素部分抽象出来\r\n function swap(i, j, array) {\r\n   var temp = array[j];\r\n   array[j] = array[i];\r\n   array[i] = temp;\r\n }"
+
+    ],
+    "description": "选择排序"
+  },
+  "直接插入排序": {
+    "prefix": "paixu-直接插入排序➷➷➷♞",
+    "body": [
+      "/**\r\n  * 直接插入排序 \r\n  * @returns \r\n  */\r\n function directInsertionSort(array) {\r\n   var length = array.length,\r\n     index, current;\r\n   for (var i = 1; i < length; i++) {\r\n     index = i - 1; //待比较元素的下标\r\n     current = array[i]; //当前元素\r\n     while (index >= 0 && array[index] > current) { //前置条件之一:待比较元素比当前元素大\r\n       array[index + 1] = array[index]; //将待比较元素后移一位\r\n       index--; //游标前移一位\r\n       //console.log(array);\r\n     }\r\n     if (index + 1 != i) { //避免同一个元素赋值给自身\r\n       array[index + 1] = current; //将当前元素插入预留空位\r\n       //console.log(array);\r\n     }\r\n   }\r\n   return array;\r\n }\r\n console.log(directInsertionSort([1, 2, 4, 1, 2, 666, 4]));"
+
+    ],
+    "description": "直接插入排序"
+  },
+  "归并排序": {
+    "prefix": "paixu-归并排序➷➷➷♞",
+    "body": [
+      "/**\r\n  * 归并排序 \r\n  * @returns \r\n  */\r\n function mergeSort(array) { //采用自上而下的递归方法\r\n   var length = array.length;\r\n   if (length < 2) {\r\n     return array;\r\n   }\r\n   var m = (length >> 1),\r\n     left = array.slice(0, m),\r\n     right = array.slice(m); //拆分为两个子数组\r\n   return merge(mergeSort(left), mergeSort(right)); //子数组继续递归拆分,然后再合并\r\n }\r\n function merge(left, right) { //合并两个子数组\r\n   var result = [];\r\n   while (left.length && right.length) {\r\n     var item = left[0] <= right[0] ? left.shift() : right.shift(); //注意:判断的条件是小于或等于,如果只是小于,那么排序将不稳定.\r\n     result.push(item);\r\n   }\r\n   return result.concat(left.length ? left : right);\r\n }\r\n console.log(mergeSort([1, 2, 4, 1, 2, 666, 4]));"
+    ],
+    "description": "归并排序"
+  },
+  "快速排序": {
+    "prefix": "paixu-快速排序➷➷➷♞",
+    "body": [
+      " /**\r\n  * 快速排序 \r\n  * 越是乱序的数列, 它相比其他排序而言, 相对效率更高\r\n  * @returns \r\n  */\r\n function quickSort(array, left, right) {\r\n   var partitionIndex,\r\n     left = typeof left == 'number' ? left : 0,\r\n     right = typeof right == 'number' ? right : array.length - 1;\r\n   if (left < right) {\r\n     partitionIndex = partition(array, left, right); //切分的基准值\r\n     quickSort(array, left, partitionIndex - 1);\r\n     quickSort(array, partitionIndex + 1, right);\r\n   }\r\n   return array;\r\n }\r\n function partition(array, left, right) { //分区操作\r\n   for (var i = left + 1, j = left; i <= right; i++) { //j是较小值存储位置的游标\r\n     array[i] < array[left] && swap(i, ++j, array); //以第一个元素为基准\r\n   }\r\n   swap(left, j, array); //将第一个元素移至中间\r\n   return j;\r\n }\r\n //先将交换元素部分抽象出来\r\n function swap(i, j, array) {\r\n   var temp = array[j];\r\n   array[j] = array[i];\r\n   array[i] = temp;\r\n }\r\n console.log(quickSort([1, 2, 4, 1, 2, 666, 4]));"
+    ],
+    "description": "快速排序"
+  },
+  "声明Jquery-Confirm插件": {
+    "prefix": "confirm-Jquery引用方法➷➷➷♞",
+    "body": [
+      "// https://cdn.bootcss.com/jquery-confirm/3.2.3/jquery-confirm.min.js\"\r\n      // https://cdn.bootcss.com/jquery-confirm/3.2.3/jquery-confirm.min.css\r\n      var JSTOOL = function() {\r\n        /* 弹窗 */\r\n        this.alert = function(title, content, callback, className) {\r\n          var confirm = callback && typeof callback === \"function\" ? callback : function() {};\r\n          var alertClass = \"\";\r\n          if (typeof className == \"undefined\") {\r\n            alertClass = 'offset2 col-md-8 col-md-offset-2';\r\n          } else {\r\n            alertClass = className;\r\n          }\r\n          $.alert({\r\n            title: title,\r\n            content: content,\r\n            confirm: confirm,\r\n            confirmButton: '确定',\r\n            cancelButton: '取消',\r\n            backgroundDismiss: false,\r\n            confirmButtonClass: 'btn-primary',\r\n            animation: 'zoom',\r\n            closeAnimation: 'scale',\r\n            columnClass: alertClass,\r\n            buttons: [{\r\n              text: \"确定\",\r\n              btnClass: \"btn-primary\"\r\n            }]\r\n          });\r\n        };\r\n        this.confirm = function(title, content, okCallback, cancelCallback, isHor) {\r\n          var confirm = okCallback && typeof okCallback === \"function\" ? okCallback : function() {};\r\n          var cancel = cancelCallback && typeof cancelCallback === \"function\" ? cancelCallback : function() {};\r\n          var className = isHor ? 'col-md-10 col-md-offset-1' : 'col-md-8 col-md-offset-2';\r\n          console.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");\r\n          console.log(className);\r\n          console.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");\r\n          $.confirm({\r\n            title: title,\r\n            content: content,\r\n            type: 'green',\r\n            columnClass: className,\r\n            buttons: {\r\n              ok: {\r\n                text: \"查看原答案\",\r\n                btnClass: 'btn-link pull-left',\r\n                keys: ['enter'],\r\n                action: confirm\r\n              },\r\n              cancel: {\r\n                text: \"确定\",\r\n                btnClass: 'btn-primary pull-right',\r\n                action: cancel\r\n              }\r\n            }\r\n          });\r\n        };\r\n        this.dialog = function(title, content) {\r\n          window.top.$.dialog({\r\n            title: title,\r\n            content: content,\r\n            animation: 'zoom',\r\n            closeAnimation: 'scale'\r\n          });\r\n        };\r\n      };\r\n      var tool = new JSTOOL();"
+    ],
+    "description": "声明Jquery-Confirm插件"
+  },
+  "计数排序": {
+    "prefix": "paixu-计数排序➷➷➷♞",
+    "body": [
+      " /**\r\n  * 计数排序 \r\n  * @returns \r\n  */\r\n function countSort(array, keyName) {\r\n   var length = array.length,\r\n     output = new Array(length),\r\n     max,\r\n     min,\r\n     simpleArray = keyName ? array.map(function(v) {\r\n       return v[keyName];\r\n     }) : array; // 如果keyName是存在的，那么就创建一个只有keyValue的简单数组\r\n   // 获取最大最小值\r\n   max = min = simpleArray[0];\r\n   simpleArray.forEach(function(v) {\r\n     v > max && (max = v);\r\n     v < min && (min = v);\r\n   });\r\n   // 获取计数数组的长度\r\n   var k = max - min + 1;\r\n   // 新建并初始化计数数组\r\n   var countArray = new Array(k);\r\n   simpleArray.forEach(function(v) {\r\n     countArray[v - min] = (countArray[v - min] || 0) + 1;\r\n   });\r\n   // 累加计数，存储不同值的初始下标\r\n   countArray.reduce(function(prev, current, i, arr) {\r\n     arr[i] = prev;\r\n     return prev + current;\r\n   }, 0);\r\n   // 从原数组挨个取值(因取的是原数组的相应值，只能通过遍历原数组来实现)\r\n   simpleArray.forEach(function(v, i) {\r\n     var j = countArray[v - min]++;\r\n     output[j] = array[i];\r\n   });\r\n   return output;\r\n }\r\n console.log(countSort([2, 1, 1, 3, 2, 1, 4, 2]));"
+    ],
+    "description": "计数排序"
+  },
+  "桶排序": {
+    "prefix": "paixu-桶排序➷➷➷♞",
+    "body": [
+      "/**\r\n  *  桶排序\r\n  * @returns \r\n  */\r\n function bucketSort(array, bucketSize) {\r\n   if (array.length === 0) {\r\n     return array;\r\n   }\r\n   var i = 1,\r\n     min = array[0],\r\n     max = min;\r\n   while (i++ < array.length) {\r\n     if (array[i] < min) {\r\n       min = array[i]; //输入数据的最小值\r\n     } else if (array[i] > max) {\r\n       max = array[i]; //输入数据的最大值\r\n     }\r\n   }\r\n   //桶的初始化\r\n   bucketSize = bucketSize || 5; //设置桶的默认大小为5\r\n   var bucketCount = ~~((max - min) / bucketSize) + 1, //桶的个数\r\n     buckets = new Array(bucketCount); //创建桶\r\n   for (i = 0; i < buckets.length; i++) {\r\n     buckets[i] = []; //初始化桶\r\n   }\r\n   //将数据分配到各个桶中,这里直接按照数据值的分布来分配,一定范围内均匀分布的数据效率最为高效\r\n   for (i = 0; i < array.length; i++) {\r\n     buckets[~~((array[i] - min) / bucketSize)].push(array[i]);\r\n   }\r\n   array.length = 0;\r\n   for (i = 0; i < buckets.length; i++) {\r\n     quickSort(buckets[i]); //对每个桶进行排序，这里使用了快速排序\r\n     for (var j = 0; j < buckets[i].length; j++) {\r\n       array.push(buckets[i][j]); //将已排序的数据写回数组中\r\n     }\r\n   }\r\n   return array;\r\n }\r\n function quickSort(array, left, right) {\r\n   var partitionIndex,\r\n     left = typeof left == 'number' ? left : 0,\r\n     right = typeof right == 'number' ? right : array.length - 1;\r\n   if (left < right) {\r\n     partitionIndex = partition(array, left, right); //切分的基准值\r\n     quickSort(array, left, partitionIndex - 1);\r\n     quickSort(array, partitionIndex + 1, right);\r\n   }\r\n   return array;\r\n }\r\n function partition(array, left, right) { //分区操作\r\n   for (var i = left + 1, j = left; i <= right; i++) { //j是较小值存储位置的游标\r\n     array[i] < array[left] && swap(i, ++j, array); //以第一个元素为基准\r\n   }\r\n   swap(left, j, array); //将第一个元素移至中间\r\n   return j;\r\n }\r\n //先将交换元素部分抽象出来\r\n function swap(i, j, array) {\r\n   var temp = array[j];\r\n   array[j] = array[i];\r\n   array[i] = temp;\r\n }\r\n console.log(bucketSort([2, 1, 1, 3, 2, 1, 4, 2]));"
+    ],
+    "description": "桶排序"
+  },
+  "基数排序": {
+    "prefix": "paixu-基数排序➷➷➷♞",
+    "body": [
+      " /**\r\n  * 基数排序\r\n  * 基数排序更适合用于对时间, 字符串等这些整体权值未知的数据进行排序\r\n  * 基数排序不改变相同元素之间的相对顺序, 因此它是稳定的排序算法.\r\n  * @returns \r\n  */\r\n function radixSort(array, max) {\r\n   var buckets = [],\r\n     unit = 10,\r\n     base = 1;\r\n   for (var i = 0; i < max; i++, base *= 10, unit *= 10) {\r\n     for (var j = 0; j < array.length; j++) {\r\n       var index = ~~((array[j] % unit) / base); //依次过滤出个位,十位等等数字\r\n       if (buckets[index] == null) {\r\n         buckets[index] = []; //初始化桶\r\n       }\r\n       buckets[index].push(array[j]); //往不同桶里添加数据\r\n     }\r\n     var pos = 0,\r\n       value;\r\n     for (var j = 0, length = buckets.length; j < length; j++) {\r\n       if (buckets[j] != null) {\r\n         while ((value = buckets[j].shift()) != null) {\r\n           array[pos++] = value; //将不同桶里数据挨个捞出来,为下一轮高位排序做准备,由于靠近桶底的元素排名靠前,因此从桶底先捞\r\n         }\r\n       }\r\n     }\r\n   }\r\n   return array;\r\n }"
+    ],
+    "description": "基数排序"
+  },
+  "网页高度": {
+    "prefix": "height-各种高度汇总➷➷➷♞",
+    "body": [
+      "//  屏幕的有效宽高：\r\n window.screen.availHeight\r\n window.screen.availWidth\r\n   //  网页可见区域宽高：\r\n document.body.clientWidth\r\n document.body.clientHeight\r\n   //  网页可见区域宽高： \r\n document.body.offsetWidth //(包括边线的宽)\r\n document.body.offsetHeight //(包括边线的宽)\r\n   //  网页正文全文宽高： \r\n document.body.scrollWidth\r\n document.body.scrollHeight\r\n   //  网页被卷去的高左：\r\n document.body.scrollTop\r\n document.body.scrollLeft\r\n   //  网页正文部分上左： \r\n window.screenTop\r\n window.screenLeft\r\n   //  屏幕所有区域分辨率的高宽： \r\n window.screen.height\r\n window.screen.width\r\n   //  屏幕(网页中)可用工作区高宽度：\r\n window.screen.availHeight\r\n window.screen.availWidth\r\n   //  HTML精确定位:\r\n scrollLeft, scrollWidth, clientWidth, offsetWidth\r\n scrollHeight //获取对象的滚动高度。\r\n scrollLeft //设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离\r\n scrollTop //设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离\r\n scrollWidth //获取对象的滚动宽度\r\n offsetHeight //获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度\r\n offsetLeft //获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置\r\n offsetTop //获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置\r\n event.clientX //相对文档的水平座标\r\n event.clientY //相对文档的垂直座标\r\n event.offsetX //相对容器的水平坐标\r\n event.offsetY //相对容器的垂直坐标\r\n document.documentElement.scrollTop //垂直方向滚动的值\r\n event.clientX + document.documentElement.scrollTop //相对文档的水平座标 + 垂直方向滚动的量"
+    ],
+    "description": "js各种高度汇总"
+  },
+  "radio取值赋值": {
+    "prefix": "radio-取值赋值➷➷➷♞",
+    "body": [
+      " //取值$(\"input[name='${1:radioName}'][checked]\").val();\r\n //赋值\r\n $(\"input[name='${1:radioName}'][value=2]\").attr(\"checked\", true);"
+    ],
+    "description": "radio取值赋值JQ方式"
+  },
+  "console.log": {
+    "prefix": "ll➷➷➷♞",
+    "body": [
+      "//<debug>\r\nconsole.${2|log,info,warn,error|}('${3:调试结果:}', ${1:arguments}); $0\r\n//</debug>"
+    ],
+    "description": "调试"
+  },
+  "todo": {
+    "prefix": "td➷➷➷♞",
+    "body": [
+      "/**\r\n * @TODO ${1:description} $0\r\n */"
+    ],
+    "description": "TODO"
+  },
+  "replace": {
+    "prefix": "td➷➷➷♞",
+    "body": [
+      "/**\r\n * @TODO ${1:description} $0\r\n */"
+    ],
+    "description": "TODO"
+  },
+  "urlSearch": {
+    "prefix": "urlsearch-A➷➷➷♞",
+    "body": [
+      "// You want to parse this address into parts:\r\nvar url = 'http://tutorialzine.com/books/jquery-trickshots?trick=12#comments';\r\n// The trickshot:\r\nvar a = $('<a>',{ href: url });\r\nlog('Host name: ' + a.prop('hostname'));\r\nlog('Path: ' + a.prop('pathname'));\r\nlog('Query: ' + a.prop('search'));\r\nlog('Protocol: ' + a.prop('protocol'));\r\nlog('Hash: ' + a.prop('hash'));"
+    ],
+    "description": "将链接转化为<a>标签再操作"
+  },
+  "密码强度检查": {
+    "prefix": "password-密码强度-➷➷➷♞",
+    "body": [
+      "/**\r\n  * 检测密码强度\r\n  * \r\n  * @param {any} str 待检查字符串\r\n  * @returns 密码强度等级(强度等级为result)\r\n  */\r\n function checkPwd(str) {\r\n   var nowLv = 0;\r\n   if (str.length < 6) {\r\n     return nowLv\r\n   }\r\n   if (/[0-9]/.test(str)) {\r\n     nowLv++\r\n   }\r\n   if (/[a-z]/.test(str)) {\r\n     nowLv++\r\n   }\r\n   if (/[A-Z]/.test(str)) {\r\n     nowLv++\r\n   }\r\n   if (/[\/\/.|-|_]/.test(str)) {\r\n     nowLv++\r\n   }\r\n   return nowLv;\r\n }"
+    ],
+    "description": "检测密码强度"
+  },
+  "检查字符串出现次数": {
+    "prefix": "str-检查字符串出现次数-➷➷➷♞",
+    "body": [
+      " /**\r\n  * 检查字符串出现次数\r\n  * \r\n  * @param {any} str 查找的字符串\r\n  * @param {any} strSplit 关键词\r\n  * @returns 出现次数\r\n  */\r\n function countStr(str, strSplit) {\r\n   return str.split(strSplit).length - 1\r\n }"
+    ],
+    "description": "检查字符串出现次数"
+  },
+  "现金额大写转换函数": {
+    "prefix": "money-现金额大写转换函数-➷➷➷♞",
+    "body": [
+      " //ecDo.upDigit(168752632)\r\n //result：\"人民币壹亿陆仟捌佰柒拾伍万贰仟陆佰叁拾贰元整\"\r\n //ecDo.upDigit(1682)\r\n //result：\"人民币壹仟陆佰捌拾贰元整\"\r\n //ecDo.upDigit(-1693)\r\n //result：\"欠人民币壹仟陆佰玖拾叁元整\"\r\n function upDigit(n) {\r\n   var fraction = ['角', '分', '厘'];\r\n   var digit = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖'];\r\n   var unit = [\r\n     ['元', '万', '亿'],\r\n     ['', '拾', '佰', '仟']\r\n   ];\r\n   var head = n < 0 ? '欠人民币' : '人民币';\r\n   n = Math.abs(n);\r\n   var s = '';\r\n   for (var i = 0; i < fraction.length; i++) {\r\n     s += (digit[Math.floor(n * 10 * Math.pow(10, i)) % 10] + fraction[i]).replace(/零./, '');\r\n   }\r\n   s = s || '整';\r\n   n = Math.floor(n);\r\n   for (var i = 0; i < unit[0].length && n > 0; i++) {\r\n     var p = '';\r\n     for (var j = 0; j < unit[1].length && n > 0; j++) {\r\n       p = digit[n % 10] + unit[1][j] + p;\r\n       n = Math.floor(n / 10);\r\n     }\r\n     s = p.replace(/(零.)*零$/, '').replace(/^$/, '零') + unit[0][i] + s;\r\n     //s = p + unit[0][i] + s;\r\n   }\r\n   return head + s.replace(/(零.)*零元/, '元').replace(/(零.)+/g, '零').replace(/^整$/, '零元整');\r\n }"
+    ],
+    "description": "现金额大写转换函数"
+  },
+  "图片懒加载": {
+    "prefix": "lazy-img➷➷➷♞",
+    "body": [
+      "//图片没加载出来时用一张图片代替\r\naftLoadImg: function (obj, url, errorUrl,cb) {\r\n    var oImg = new Image(), _this = this;\r\n    oImg.src = url;\r\n    oImg.onload = function () {\r\n        obj.src = oImg.src;\r\n        if (cb && _this.istype(cb, 'function')) {\r\n            cb(obj);\r\n        }\r\n    }\r\n    oImg.onerror=function () {\r\n        obj.src=errorUrl;\r\n        if (cb && _this.istype(cb, 'function')) {\r\n            cb(obj);\r\n        }\r\n    }\r\n},\r\n//图片滚动懒加载\r\n//@className {string} 要遍历图片的类名\r\n//@num {number} 距离多少的时候开始加载 默认 0\r\n//比如，一张图片距离文档顶部3000，num参数设置200，那么在页面滚动到2800的时候，图片加载。不传num参数就滚动，num默认是0，页面滚动到3000就加载\r\n//html代码\r\n//<p><img data-src=\"https://user-gold-cdn.xitu.io/2017/12/7/160319f12631736f\" class=\"load-img\" width='528' height='304' /></p>\r\n//<p><img data-src=\"https://user-gold-cdn.xitu.io/2017/12/7/160319f12631736f\" class=\"load-img\" width='528' height='304' /></p>\r\n//<p><img data-src=\"https://user-gold-cdn.xitu.io/2017/12/7/160319f12631736f\" class=\"load-img\" width='528' height='304' /></p>....\r\n//data-src储存src的数据，到需要加载的时候把data-src的值赋值给src属性，图片就会加载。\r\n//详细可以查看testLoadImg.html\r\n//window.onload = function() {\r\n//    loadImg('load-img',100);\r\n//    window.onscroll = function() {\r\n//        ecDo.loadImg('load-img',100);\r\n//        }\r\n//}\r\nloadImg: function (className, num, errorUrl) {\r\n    var _className = className || 'ec-load-img', _num = num || 0, _this = this,_errorUrl=errorUrl||null;\r\n    var oImgLoad = document.getElementsByClassName(_className);\r\n    for (var i = 0, len = oImgLoad.length; i < len; i++) {\r\n        //如果图片已经滚动到指定的高度\r\n        if (document.documentElement.clientHeight + document.documentElement.scrollTop > oImgLoad[i].offsetTop - _num && !oImgLoad[i].isLoad) {\r\n            //记录图片是否已经加载\r\n            oImgLoad[i].isLoad = true;\r\n            //设置过渡，当图片下来的时候有一个图片透明度变化\r\n            oImgLoad[i].style.cssText = \"transition: ''; opacity: 0;\"\r\n            if (oImgLoad[i].dataset) {\r\n                this.aftLoadImg(oImgLoad[i], oImgLoad[i].dataset.src, _errorUrl, function (o) {\r\n                    //添加定时器，确保图片已经加载完了，再把图片指定的的class，清掉，避免重复编辑\r\n                    setTimeout(function () {\r\n                        if (o.isLoad) {\r\n                            _this.removeClass(o, _className);\r\n                            o.style.cssText = \"\";\r\n                        }\r\n                    }, 1000)\r\n                });\r\n            } else {\r\n                this.aftLoadImg(oImgLoad[i], oImgLoad[i].getAttribute(\"data-src\"), _errorUrl, function (o) {\r\n                    //添加定时器，确保图片已经加载完了，再把图片指定的的class，清掉，避免重复编辑\r\n                    setTimeout(function () {\r\n                        if (o.isLoad) {\r\n                            _this.removeClass(o, _className);\r\n                            o.style.cssText = \"\";\r\n                        }\r\n                    }, 1000)\r\n                });\r\n            }\r\n            (function (i) {\r\n                setTimeout(function () {\r\n                    oImgLoad[i].style.cssText = \"transition:all 1s; opacity: 1;\";\r\n                }, 16)\r\n            })(i);\r\n        }\r\n    }\r\n}\r\n "
+    ],
+    "description": "图片懒加载"
+  },
+  "数据类型判断 ": {
+    "prefix": "type-各种数据类型检测➷➷➷♞",
+    "body": [
+      "/**\r\n  *  istype([],'array')\r\n  * \r\n  * @param {any} o \r\n  * @param {any} type \r\n  * @returns \r\n  */\r\n function istype(o, type) {\r\n   if (type) {\r\n     var _type = type.toLowerCase();\r\n   }\r\n   switch (_type) {\r\n     case 'string':\r\n       return Object.prototype.toString.call(o) === '[object String]';\r\n     case 'number':\r\n       return Object.prototype.toString.call(o) === '[object Number]';\r\n     case 'boolean':\r\n       return Object.prototype.toString.call(o) === '[object Boolean]';\r\n     case 'undefined':\r\n       return Object.prototype.toString.call(o) === '[object Undefined]';\r\n     case 'null':\r\n       return Object.prototype.toString.call(o) === '[object Null]';\r\n     case 'function':\r\n       return Object.prototype.toString.call(o) === '[object Function]';\r\n     case 'array':\r\n       return Object.prototype.toString.call(o) === '[object Array]';\r\n     case 'object':\r\n       return Object.prototype.toString.call(o) === '[object Object]';\r\n     case 'nan':\r\n       return isNaN(o);\r\n     case 'elements':\r\n       return Object.prototype.toString.call(o).indexOf('HTML') !== -1\r\n     default:\r\n       return Object.prototype.toString.call(o)\r\n   }\r\n }"
+
+    ],
+    "description": "数据类型判断"
+  },
+  "发布/订阅实例": {
+    "prefix": "event-发布/订阅实例➷➷➷♞",
+    "body": [
+      "var events = (function(){\r\n  var topics = {};\r\n \r\n  return {\r\n    subscribe: function(topic, listener) {\r\n      // 如果没有创建,则创建一个topic对象\r\n      if(!topics[topic]) topics[topic] = { queue: [] };\r\n \r\n      // 添加监听器到队列中\r\n      var index = topics[topic].queue.push(listener) -1;\r\n \r\n      // 提供移除topic的句柄(对象)\r\n      return (function(topic, index) {\r\n        return {\r\n          remove: function() {\r\n            delete topics[topic].queue[index];\r\n          }\r\n        }\r\n      })(topic, index);\r\n    },\r\n    publish: function(topic, info) {\r\n      // 如果 topic 不存在,或者队列中没有监听器,则 return\r\n      if(!topics[topic] || !topics[topic].queue.length) return;\r\n \r\n      // 通过循环 topics 队列, 触发事件!\r\n      var items = topics[topic].queue;\r\n      items.forEach(function(item) {\r\n            item(info||{});\r\n      });\r\n    }\r\n  };\r\n})();"
+    ],
+    "description": "发布/订阅实例"
+  },
+  "滚动相关": {
+    "prefix": "scroll-about-滚动相关事件➷➷➷♞",
+    "body": [
+      "/**\r\n * JQ 获取元素离顶部距离 \r\n * @returns \r\n */\r\nfunction scrollToTop() {\r\n  var mTop = $('#dom').offsetTop;\r\n  var sTop = $(window).scrollTop();\r\n  return mTop - sTop;\r\n}\r\n/**\r\n * 标题栏固定在顶部 \r\n * @returns\r\n */\r\n$(window).bind(\"scroll\", function(){\r\n  var top = $(this).scrollTop(); // 当前窗口的滚动距离\r\n  if(top>1){\r\n      $(\".header\").addClass(\"fixedTopMenu\");\r\n  }\r\n  if(top==0){\r\n      $(\".header\").removeClass(\"fixedTopMenu\");\r\n  }\r\n});\r\n/**\r\n * 滚动到顶部 \r\n * @returns \r\n */\r\n$(\"#goTotop\").click(function(){  \r\n  $('body,html').animate({scrollTop:0},1500); //点击按钮让其回到页面顶部  \r\n});"
+    ],
+    "description": "scroll-about-滚动相关事件"
+  },
+  "phone": {
+    "prefix": "phone-检测手机号是否正确➷➷➷♞",
+    "body": [
+      "function checkPhone(phone) {\r\n                if (!(/^1(3|4|5|7|8)\\d{9}$/.test(phone))) {\r\n                  return false;\r\n                } else {\r\n                  return true;\r\n                }\r\n              }"
+
+    ],
+    "description": "phone-检测手机号是否正确"
+  },
+
+  "scroll-距离底部的距离": {
+    "prefix": "scroll-用于滚动时距离底部的距离",
+    "body": [
+      "/**\r\n * 滚动条到底部的距离\r\n * 距离底部高度 = 总的高度 - 卷去的高度 - 窗体的高度\r\n * @returns\r\n */\r\nfunction getScrollBottomHeight() {\r\n  return getPageHeight() - getScrollTop() - getWindowHeight();\r\n}\r\n/**\r\n * 获取页面整体高度\r\n *\r\n * @returns\r\n */\r\nfunction getPageHeight() {\r\n  return document.querySelector(\"html\").scrollHeight;\r\n}\r\n/**\r\n * 滚动的高度(窗口顶部隐去的高度)\r\n *\r\n * @returns\r\n */\r\nfunction getScrollTop() {\r\n  let scrollTop = 0,\r\n    bodyScrollTop = 0,\r\n    documentScrollTop = 0;\r\n  if (document.body) {\r\n    bodyScrollTop = document.body.scrollTop;\r\n  }\r\n  if (document.documentElement) {\r\n    documentScrollTop = document.documentElement.scrollTop;\r\n  }\r\n  scrollTop =\r\n    bodyScrollTop - documentScrollTop > 0 ? bodyScrollTop : documentScrollTop;\r\n  return scrollTop;\r\n}\r\n/**\r\n * 获取窗口高度\r\n *\r\n * @returns\r\n */\r\nfunction getWindowHeight() {\r\n  let windowHeight = 0;\r\n  if (document.compatMode == \"CSS1Compat\") {\r\n    windowHeight = document.documentElement.clientHeight;\r\n  } else {\r\n    windowHeight = document.body.clientHeight;\r\n  }\r\n  return windowHeight;\r\n}\r\n/**\r\n * 函数节流方法\r\n *\r\n * @returns\r\n */\r\nfunction throttle() {\r\n  threshhold || (threshhold = 250);\r\n  var last,\r\n    timer;\r\n  return function() {\r\n    var context = scope || this;\r\n    var now = +new Date(),\r\n      args = arguments;\r\n    if (last && now - last + threshhold < 0) {\r\n      // hold on to it\r\n      clearTimeout(deferTimer);\r\n      timer = setTimeout(function() {\r\n        last = now;\r\n        fn.apply(context, args);\r\n      }, threshhold);\r\n    } else {\r\n      last = now;\r\n      fn.apply(context, args);\r\n    }\r\n  };\r\n}\r\n/**\r\n * 函数去抖方法\r\n *\r\n * @returns\r\n */\r\nfunction debounce() {\r\n  let timer = null;\r\n  return function() {\r\n    let context = this,\r\n      args = arguments;\r\n    clearTimeout(timer);\r\n    timer = setTimeout(\r\n      function() {\r\n        method.apply(context, args);\r\n      }, delay);\r\n  }\r\n}"
+    ],
+    "description": "检测距离底部的距离"
+  },
+
+
+  /*
+  '##::::'##:'##::::'##:'########:::::::'##::'######::
+   ##:::: ##: ##:::: ##: ##.....:::::::: ##:'##... ##:
+   ##:::: ##: ##:::: ##: ##::::::::::::: ##: ##:::..::
+   ##:::: ##: ##:::: ##: ######::::::::: ##:. ######::
+  . ##:: ##:: ##:::: ##: ##...::::'##::: ##::..... ##:
+  :. ## ##::: ##:::: ##: ##::::::: ##::: ##:'##::: ##:
+  ::. ###::::. #######:: ########:. ######::. ######::
+  :::...::::::.......:::........:::......::::......:::
+  */
+  "Vue实例": {
+    "prefix": "newvue-简化版 ➷➷➷♞",
+    "body": [
+      "   var ${1:name } = new Vue({\r\n     el: \"#${1:name}\",\r\n     //数据部分 \r\n     data: {\r\n     },\r\n     //方法\r\n     methods: {\r\n     },\r\n     //过滤器\r\n     filters: {\r\n     },\r\n     //实时计算\r\n     computed: {\r\n     },\r\n     //加载后立即执行的方法(created 这个钩子在实例被创建之后被调用)\r\n     created: function() {\r\n     }\r\n   });"
+    ],
+    "description": "一个新的vue实例"
+  },
+  "vue-element-提示": {
+    "prefix": ["alert-element框架-vue➷➷➷♞",
+      "thisalert-element框架-vue➷➷➷♞",
+      "toolalert-element框架-vue➷➷➷♞"
+    ],
+    "body": [
+      "this.$$alert('${1:提示内容}', '${2:提示}', {\r\n    confirmButtonText: '确定',\r\n    callback: action => {\r\n      ${3:this.$$message({\r\n        type: 'info',\r\n        message: `$4TODOMESSAGE提示信息`\r\n      }});\r\n    }\r\n  });"
+    ],
+    "description": "Element-alert提示框"
+  },
+
+  "vue-element-confirm提示": {
+    "prefix": [
+      "confirm-element框架-vue➷➷➷♞",
+      "toolconfirm-element框架-vue➷➷➷♞",
+      "thisconfirm-element框架-vue➷➷➷♞"
+    ],
+    "body": [
+      "this.$$confirm('${1:提示信息}', '${2:提示}', {\r\n    confirmButtonText: '确定',\r\n    cancelButtonText: '取消',\r\n    type: '${3:info}' //success error info warning\r\n  }).then(() => {\r\n    // TODO 点击确定按钮时候的逻辑\r\n    $4\r\n  }).catch(() => {\r\n    // TODO 点击取消按钮时候的逻辑  \r\n    $5       \r\n  });"
+    ],
+    "description": "Element-confirm提示框"
+  },
+  "vue-element-prompt提示": {
+    "prefix": ["prompt-element框架-vue➷➷➷♞", "thisprompt-element框架-vue➷➷➷♞", "toolprompt-element框架-vue➷➷➷♞"],
+    "body": [
+      "this.$$prompt('${1:文字提示}', '${2:提示}', {\r\n  confirmButtonText: '确定',\r\n  cancelButtonText: '取消',\r\n  //   inputPattern: /[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?/,\r\n  //   inputErrorMessage: '邮箱格式不正确'\r\n}).then(({ value }) => {\r\n  // TODO 此处显示用户输入的值\r\n    $3\r\n}).catch(() => {\r\n  // TODO 用户点击取消时的按钮\r\n    $4\r\n});"
+    ],
+    "description": "Element-prompt提示框"
+  },
+  "vue-element-message提示": {
+    "prefix": "message-element框架-vue➷➷➷♞",
+    "body": [
+      "this.$$message({\r\n    message: '${1:消息提示}',\r\n    type: 'success'  // warning error info\r\n  }); "
+    ],
+    "description": "Element-message消息提示"
+  },"vue-element-Error-message提示": {
+    "prefix": "messageerror-element-错误提示-vue➷➷➷♞",
+    "body": [
+      "this.$$message.error(\"${1:错误提示}\"); "
+    ],
+    "description": "Element-message 错误Error消息提示"
+  },
+
+  "vueajax": {
+    "prefix": "ajax-VUE版 ➷➷➷♞",
+    "body": [
+      "this.$${1:get}${2:post}(`${3:请求的地址}`, {\r\n    ${4:options}\r\n    })\r\n    .then(data => {\r\n      $5\r\n      return data;\r\n    });"
+    ],
+    "description": "ajax请求方法"
+  },
+  "Vue实例点阵字版本": {
+    "prefix": "newvue-究极进化版 ➷➷➷♞",
+    "body": [
+      "/*\r\n██╗   ██╗██╗   ██╗███████╗██╗███╗   ██╗██╗████████╗\r\n██║   ██║██║   ██║██╔════╝██║████╗  ██║██║╚══██╔══╝\r\n██║   ██║██║   ██║█████╗  ██║██╔██╗ ██║██║   ██║\r\n╚██╗ ██╔╝██║   ██║██╔══╝  ██║██║╚██╗██║██║   ██║\r\n ╚████╔╝ ╚██████╔╝███████╗██║██║ ╚████║██║   ██║\r\n  ╚═══╝   ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝\r\n*/\r\nvar ${1:vueBlock} = new Vue({\r\n    el: \"#${1:vueBlock}\",\r\n    /*\r\n     ██████╗  █████╗ ████████╗ █████╗\r\n     ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗\r\n     ██║  ██║███████║   ██║   ███████║\r\n     ██║  ██║██╔══██║   ██║   ██╔══██║\r\n     ██████╔╝██║  ██║   ██║   ██║  ██║\r\n     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝\r\n     */\r\n    //数据部分 \r\n    data: {\r\n    },\r\n    /*\r\n    ███╗   ███╗███████╗████████╗██╗  ██╗ ██████╗ ██████╗ ███████╗\r\n    ████╗ ████║██╔════╝╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██╔════╝\r\n    ██╔████╔██║█████╗     ██║   ███████║██║   ██║██║  ██║███████╗\r\n    ██║╚██╔╝██║██╔══╝     ██║   ██╔══██║██║   ██║██║  ██║╚════██║\r\n    ██║ ╚═╝ ██║███████╗   ██║   ██║  ██║╚██████╔╝██████╔╝███████║\r\n    ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝\r\n    */\r\n    //方法\r\n    methods: {\r\n    },\r\n    /*\r\n    ███████╗██╗██╗  ████████╗███████╗██████╗ ███████╗\r\n    ██╔════╝██║██║  ╚══██╔══╝██╔════╝██╔══██╗██╔════╝\r\n    █████╗  ██║██║     ██║   █████╗  ██████╔╝███████╗\r\n    ██╔══╝  ██║██║     ██║   ██╔══╝  ██╔══██╗╚════██║\r\n    ██║     ██║███████╗██║   ███████╗██║  ██║███████║\r\n    ╚═╝     ╚═╝╚══════╝╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝\r\n    */\r\n    //过滤器\r\n    filters: {\r\n    },\r\n    /*\r\n     ██████╗ ██████╗ ███╗   ███╗██████╗ ██╗   ██╗████████╗███████╗██████╗\r\n    ██╔════╝██╔═══██╗████╗ ████║██╔══██╗██║   ██║╚══██╔══╝██╔════╝██╔══██╗\r\n    ██║     ██║   ██║██╔████╔██║██████╔╝██║   ██║   ██║   █████╗  ██║  ██║\r\n    ██║     ██║   ██║██║╚██╔╝██║██╔═══╝ ██║   ██║   ██║   ██╔══╝  ██║  ██║\r\n    ╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ╚██████╔╝   ██║   ███████╗██████╔╝\r\n     ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝      ╚═════╝    ╚═╝   ╚══════╝╚═════╝\r\n    */\r\n    //实时计算\r\n    computed: {\r\n    },\r\n    /*\r\n     ██████╗██████╗ ███████╗ █████╗ ████████╗███████╗██████╗\r\n    ██╔════╝██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗\r\n    ██║     ██████╔╝█████╗  ███████║   ██║   █████╗  ██║  ██║\r\n    ██║     ██╔══██╗██╔══╝  ██╔══██║   ██║   ██╔══╝  ██║  ██║\r\n    ╚██████╗██║  ██║███████╗██║  ██║   ██║   ███████╗██████╔╝\r\n     ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═════╝\r\n    */\r\n    //加载后立即执行的方法(created 这个钩子在实例被创建之后被调用)\r\n    created: function () {\r\n    },\r\n    /*\r\n    ███╗   ███╗ ██████╗ ██╗   ██╗███╗   ██╗████████╗███████╗██████╗\r\n    ████╗ ████║██╔═══██╗██║   ██║████╗  ██║╚══██╔══╝██╔════╝██╔══██╗\r\n    ██╔████╔██║██║   ██║██║   ██║██╔██╗ ██║   ██║   █████╗  ██║  ██║\r\n    ██║╚██╔╝██║██║   ██║██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║  ██║\r\n    ██║ ╚═╝ ██║╚██████╔╝╚██████╔╝██║ ╚████║   ██║   ███████╗██████╔╝\r\n    ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═════╝\r\n    */\r\n    //Dom更新完后执行\r\n    mounted: function () {\r\n    }\r\n});"
+    ],
+    "description": "一个新的vue实例"
+  },
+  "Vue声明模板": {
+    "prefix": "vuecomponent ➷➷➷♞",
+    "body": [
+      "Vue.component('${1:name}', {\r\n  template: '${2:htmlstr}',\r\n  //对外获取的数据\r\n  props: { $3 },\r\n  //组件内数据部分\r\n  data: function() {\r\n    return { $4 }\r\n  },\r\n  //组件生成时调用\r\n  mounted: function() { $5 }\r\n});"
+    ],
+    "description": "一个新的Vue声明模板"
+  },
+  "Vue自定义指令": {
+    "prefix": "vuedirective ➷➷➷♞",
+    "body": [
+      "Vue.directive('${1:name}', {\r\n bind: function (el, binding, vnode, oldVnode) {\r\n  console.log(el);\r\n  console.log(binding);\r\n  console.log(vnode);\r\n  console.log(oldVnode);\r\n },\r\n  // 当绑定元素插入到 DOM 中。\r\n inserted: function (el) {\r\n  console.log('inserted')\r\n },\r\n  // 值发生变化时事件  被绑定元素所在的模板更新时调用，而不论绑定值是否变化。\r\n update: function (el) {\r\n  console.log('update')\r\n },\r\n // 值发生变化后事件  被绑定元素所在模板完成一次更新周期时调用。\r\n componentUpdated: function (el) {\r\n  console.log('componentUpdated')\r\n },\r\n //只调用一次，指令与元素解绑时调用。\r\n unbind: function (el) {\r\n  console.log('unbind')\r\n }\r\n})"
+    ],
+    "description": "一个新的Vue声明模板 ➷➷➷♞"
+  },
+  "所处环境监测": {
+    "prefix": ["process-环境-vue ➷➷➷♞","deve-VueCli所处环境-vue ➷➷➷♞"],
+    "body": [
+      "process.env.NODE_ENV === 'production' ? ${1:正式环境TODO} : ${2:开发环境TODO};"
+    ],
+    "description": "检测当前Vue是开发环境还是生产环境  进行不同的操作"
+  },
+
+  "VUE-yibuqingqiu-get": {
+    "prefix": [
+      "ajax-$post-Vue版本 ➷➷➷♞(这俩一样 (#^.^#)",
+      "post-ajax请求Vue版本 ➷➷➷♞",
+      "ajaxpost-Vue项目 ➷➷➷♞(这俩一样 (#^.^#)",
+      "thispost-Vue版本 ➷➷➷♞"],
+    "body": [
+      "this.$$post(\r\n`${1:URL}`,//TODO请求的地址\r\n{\r\n//TODO 请求的data参数\r\n$2\r\n})\r\n.then(data => {\r\n    if (data.success) {\r\n    //TODO 操作成功进行的操作\r\n    $3\r\n    // this.$$message({ message: '操作成功!',type: 'success'});\r\n    //TODO 是否需要重新获取列表\r\n    } else {\r\n    this.$$message.error(data.message || `操作失败,请重试！`); \r\n    }\r\n}).catch(() => {\r\n    this.$$message.error(\"请求服务失败,请重试！\"); \r\n}).finally(() => {\r\n  //TODO 此处需要重置某些ajax loading状态\r\n  $4\r\n});"
+    ],
+    "description": "异步请求GET操作"
+  },
+  "mock数据添加": {
+    "prefix": "mock-数据 ➷➷➷♞",
+    "body": [
+      "// NOTE dev-server使用方法\r\n// 一、 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ \r\n//创建文件名称:dev-server.js 引入express \r\nconst express = require('express');\r\nconst routes = express.Router();\r\n//读取json文件\r\nconst readFileLines = filename => fs.readFileSync(filename).toString('UTF8');\r\n/**\r\n * 自动根据请求的名称 返回对应的json数据 \r\n * @returns \r\n */\r\nroutes.get('/api/mock/:path', (req, res) => {\r\n  let param = req.params.path;\r\n  let filePath = path.resolve(__dirname, `./../mock/${param}.json`);\r\n  res.json(readFileLines(filePath));\r\n});\r\nmodule.exports = routes;\r\n// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\r\n// 二、■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\r\n// 在webpack.dev.conf.js中\r\n//引入mock数据\r\nlet router = require('./dev-server');\r\n// 在下面devServer属性中添加\r\n// devServer: {\r\n  /**\r\n   * 引入mock数据\r\n   *\r\n   * @param {*} app 内置参数 express实例\r\n   */\r\n  before(app) {\r\n    app.use(\"/\", router);\r\n  }\r\n// }" +
+
+    ],
+    "description": "在vue项目中创建临时接口"
+  },
+
+
+  // '##::: ##::'#######::'########::'########:::::::'##::'######::
+  // ###:: ##:'##.... ##: ##.... ##: ##.....:::::::: ##:'##... ##:
+  // ####: ##: ##:::: ##: ##:::: ##: ##::::::::::::: ##: ##:::..::
+  // ## ## ##: ##:::: ##: ##:::: ##: ######::::::::: ##:. ######::
+  // ##. ####: ##:::: ##: ##:::: ##: ##...::::'##::: ##::..... ##:
+  // ##:. ###: ##:::: ##: ##:::: ##: ##::::::: ##::: ##:'##::: ##:
+  // ##::. ##:. #######:: ########:: ########:. ######::. ######::
+  "process": {
+    "prefix": "process-error-处理未捕获Error➷➷➷♞",
+    "body": [
+      "// nodejs - 异常处理\r\nprocess.on('uncaughtException', function(err) {\r\n  //打印出错误\r\n  console.log(err);\r\n  console.log(err.stack);\r\n});"
+    ],
+    "description": "程序崩溃时如何处理"
+  },
+  "Nodejs设置接口": {
+    "prefix": "routerall-添加接口➷➷➷♞",
+    "body": [
+      "router.${2:all}('/${1:users}', function(req, res, next) {\r\n  try {　　\r\n    // var currentPage = req.body.currentPage || 1;\r\n    var obj = {\r\n      success: true,\r\n      data: []\r\n    };\r\n    res.json(obj);\r\n  } catch (error) {\r\n    var errorMessage = {\r\n      success: false,\r\n      errorMessage: error\r\n    }\r\n    res.json(errorMessage);\r\n    console.error(error);　　\r\n  }\r\n});"
+    ],
+    "description": "router添加一个接口"
+  },
+  "mysql处理": {
+    "prefix": "sqlchuli-MYSQL语句执行➷➷➷♞",
+    "body": [
+      "//sql语句\r\nvar sql = \"${1:insert into SQL_TABLE(A,B,time) values(?,?,NOW())}\";\r\n// \"update  music set name=? , author=?  where id=?\";\r\nvar param = [\r\n  TODO1,\r\n  TODO2\r\n];\r\nreturn new Promise(function(resolve, reject) {\r\n  client.query(sql, param, function(err, result) {\r\n    if (err) {\r\n      reject(err);\r\n      return;\r\n    } else {\r\n      resolve(result);\r\n    }\r\n  });\r\n});"
+    ],
+    "description": "nodejs-mysql模块处理sql语句"
+  },
+  "mysql配置": {
+    "prefix": "sqlpeizhi-MYSQL配置语句➷➷➷♞",
+    "body": [
+      "var mysql = require('mysql');\r\nvar TEST_DATABASE = 'nodesql';\r\nvar TEST_TABLE = 'user';\r\n//创建连接\r\nvar client = mysql.createConnection({\r\n  host: '127.0.0.1',\r\n  user: 'root',\r\n  password: '123456',\r\n  port: '3306'\r\n});\r\nclient.connect();\r\n//和哪个数据库建立连接\r\nclient.query(\"use \" + TEST_DATABASE);"
+    ],
+    "description": "MYSQL配置连接数据库"
+  },
+  "mysql异常处理": {
+    "prefix": "process-error-异常处理➷➷➷♞",
+    "body": [
+      "// nodejs - 异常处理\r\nprocess.on('uncaughtException', function(err) {\r\n  //打印出错误\r\n  console.log(err);\r\n  //打印出错误的调用栈方便调试\r\n  console.log(err.stack);\r\n});"
+    ],
+    "description": "process进程错误处理"
+  },
+  "mysql常用语句": {
+    "prefix": "sqlyuju-MYSQL常用语句➷➷➷♞",
+    "body": [
+      "1、创建数据库\r\nCREATE DATABASE database-name\r\n2、删除数据库\r\ndrop database dbname\r\n3、备份sql server\r\n--- 创建 备份数据的 device\r\n USE master\r\n EXEC sp_addumpdevice 'disk', 'testBack', 'c:\/\/mssql7backup\/\/MyNwind_1.dat'\r\n--- 开始 备份\r\nBACKUP DATABASE pubs TO testBack\r\n4、创建新表\r\ncreate table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)\r\n根据已有的表创建新表：\r\nA：create table tab_new like tab_old (使用旧表创建新表)\r\nB：create table tab_new as select col1,col2… from tab_old definition only\r\n5、删除新表\r\ndrop table tabname\r\n6、增加一个列\r\nAlter table topcomment add column newcolumn  VARCHAR(250)\r\n注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。\r\n7、添加主键： Alter table tabname add primary key(col)\r\n删除主键： Alter table tabname drop primary key(col)\r\n8、创建索引：create [unique] index idxname on tabname(col….)\r\n删除索引：drop index idxname\r\n注：索引是不可更改的，想更改必须删除重新建。\r\n9、创建视图：create view viewname as select statement\r\n删除视图：drop view viewname\r\n10、几个简单的基本的sql语句\r\n 选择：select * from table1 where 范围\r\n 插入：insert into table1(field1,field2) values(value1,value2)\r\n删除：delete from table1 where 范围\r\n 更新：update table1 set field1=value1 where 范围\r\n 查找：select * from table1 where field1 like ’%value1%’ ---like的语法很精妙，查资料!\r\n排序：select * from table1 order by field1,field2 [desc]\r\n总数：select count as totalcount from table1\r\n求和：select sum(field1) as sumvalue from table1\r\n平均：select avg(field1) as avgvalue from table1\r\n最大：select max(field1) as maxvalue from table1\r\n最小：select min(field1) as minvalue from table1"
+
+    ],
+    "description": "MYSQL常用SQL语句"
+  },
+  "获取当天日期": {
+    "prefix": "date-当天日期➷➷➷♞",
+    "body": [
+      "/**\r\n * 获取当天日期\r\n * @param {规定只返回日期还是返回日期时间} dates\r\n * @returns {}\r\n */\r\nfunction getNowFormatDate(dates) {\r\n  var date = new Date(),\r\n    seperator1 = \"-\",\r\n    seperator2 = \":\",\r\n    month = date.getMonth() + 1,\r\n    strDate = date.getDate();\r\n  if (month >= 1 && month <= 9)\r\n    month = \"0\" + month;\r\n  if (strDate >= 0 && strDate <= 9)\r\n    strDate = \"0\" + strDate;\r\n  //返回当前的日期（时间）\r\n  var currentdate = dates !== 'date' ? date.getFullYear() + seperator1 + month + seperator1 + strDate + \" \" + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds() : date.getFullYear() + seperator1 + month + seperator1 + strDate;\r\n  return currentdate;\r\n}"
+    ],
+    "description": "js 获取今天的日期格式"
+  },
+  "文件复制": {
+    "prefix": "copy-nodejs复制文件➷➷➷♞",
+    "body": [
+      "let fs = require('fs');\r\nlet path = require('path');\r\n/**\r\n * 复制src目录中的所有文件\r\n *\r\n * @param {*} src 被复制的路径\r\n * @param {*} dst 新路径\r\n * @param {*} isIncludeChildDir 是否包含子目录(默认不包含)\r\n */\r\nlet copy = (src, dst, isIncludeChildDir = false) => {\r\n  let paths = fs.readdirSync(src); // 同步读取目录中的所有文件/目录\r\n  //遍历文件\r\n  paths.forEach(path => {\r\n    let _src = src + '/' + path;\r\n    let _dst = isIncludeChildDir ? (dst + '/' + path) : dst;\r\n    fs.stat(_src, (err, st) => {\r\n      if (err) { throw err; }\r\n      // 判断是否为文件\r\n      if (st.isFile()) {\r\n        //如果完整映射 需去除此变量\r\n        let newPath = isIncludeChildDir ? _dst : (_dst + '/' + _src.substr(_src.lastIndexOf('/') + 1));\r\n        console.log(\"复制到 ■■■■■■■ \" + newPath);\r\n        //进行资源处理\r\n        fs.writeFileSync(newPath, fs.readFileSync(_src));\r\n      } else if (st.isDirectory()) {\r\n        // 如果是目录则递归调用自身\r\n        startCopy(_src, _dst, isIncludeChildDir);\r\n      }\r\n    });\r\n  });\r\n};\r\n/**\r\n * 注意此处如果想让目录一一对应,则需调整isFullCopy的值\r\n *\r\n * @param {*} src 被复制的路径\r\n * @param {*} dst 复制的路径\r\n * @param {*} isFullCopy 是否完整复制子路径\r\n */\r\nlet startCopy = (src, dst, isFullCopy = false) => {\r\n  fs.exists(dst, function(exists) {\r\n    // 已存在\r\n    if (exists) {\r\n      copy(src, dst, isFullCopy);\r\n    }\r\n    // 不存在则创建此目录\r\n    else {\r\n      fs.mkdir(dst, function() {\r\n        copy(src, dst, isFullCopy);\r\n      });\r\n    }\r\n  });\r\n};\r\n//运行代码\r\nstartCopy(path.resolve(__dirname, './tubatu/img2'), path.resolve(__dirname, './tubatu/ALL/'), false);"
+    ],
+    "description": "Node.js复制文件"
+  },
+  "spider-Handle": {
+    "prefix": "spider-Handler➷➷➷♞",
+    "body": [
+      "/*\r\n * @Author:马少博 (ma.shaobo@qq.com)\r\n * 工具类 尽量避免影响逻辑\r\n * @Date: 2018年6月4日13:31:43\r\n * @Last Modified by: 马少博\r\n * @Last Modified time:2018年6月4日13:31:47\r\n * \r\n */\r\n/* jshint esversion: 6 */\r\nlet https = require(\"https\");\r\nlet fs = require(\"fs\");\r\nlet path = require('path');\r\nlet colors = require('colors');\r\nvar cheerio = require('cheerio');\r\nclass Handle {\r\n  constructor() {\r\n  };\r\n  /**\r\n   * 获取字符串中纯数字[静态方法]\r\n   * @param {*} text\r\n   */\r\n  static getNum(text) {\r\n    var value = text.replace(/[^0-9]/ig, \"\");\r\n    return value;\r\n  };\r\n  /**\r\n   * 处理标题[静态方法]\r\n   * @param {string} [title=\"标题\"] 传入的标题名\r\n   */\r\n  static handleTitle(title = \"标题\") {\r\n    title = this.dirName(title);\r\n    var index = title.indexOf(\" - \");\r\n    return index > -1 ? title.substring(0, index) : title;\r\n  };\r\n  /**\r\n   * 去除特殊符号[静态方法]\r\n   * @param {*} str 字符串\r\n   */\r\n  static dirName(str) {\r\n    var pattern = new RegExp(\"[`~!@#$^&*()=|{}':;',\/\/\/\/[\/\/\/\/].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]\")\r\n    var rs = \"\";\r\n    for (var i = 0; i < str.length; i++) {\r\n      rs = rs + str.substr(i, 1).replace(pattern, '');\r\n    }\r\n    return rs;\r\n  };\r\n  /**\r\n   *创建目录\r\n   * @static\r\n   * @param {*} dir 当前目录的相对路径\r\n   * @memberof Handle\r\n   */\r\n  static createDir(dir) {\r\n    let filePath = path.resolve(__dirname, dir);\r\n    !fs.existsSync(filePath) && fs.mkdirSync(filePath); //创建目录\r\n  };\r\n  /**\r\n   * 注释\r\n   * @static\r\n   * @param {*} str\r\n   * @memberof Handle\r\n   */\r\n  static log(str) {\r\n    console.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");\r\n    console.log(str);\r\n    console.log(\"■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\");\r\n  };\r\n  /**\r\n   * 根据问题ID和index 获取对应页的答案地址\r\n   *\r\n   * @static\r\n   * @param {*} qId 问题Id\r\n   * @param {*} index 答案页数\r\n   * @returns 处理过的地址\r\n   * @memberof Handle\r\n   */\r\n  static getAnswerUrlByPageIndex(qId, index) {\r\n    return `https://500px.me/community/contest/cb9bea96466f4dc39f5d5fe2d927a5f8/photos?orderby=createdTime&type=json&page=${index+1}&size=20`;\r\n  };\r\n  /**\r\n   * 获取处理后图片路径 \r\n   */\r\n  static handleImgUrl(url) {\r\n    if (url == \"//zhstatic.zhihu.com/assets/zhihu/ztext/whitedot.jpg\") {\r\n      return ''; //空图片不处理\r\n    }\r\n    if (url != null && url != \"\") {\r\n      if (url.indexOf('https') > -1) {\r\n        url = \"http\" + url.substr(5);\r\n      }\r\n    }\r\n    return url;\r\n  };\r\n  /**\r\n   * 替换某个字符串为另外一个字符串函数\r\n   * \r\n   * @param {any} bigStr  全部字符\r\n   * @param {any} str1 被替换的字符\r\n   * @param {any} str2 新字符\r\n   * @returns 新的字符串\r\n   */\r\n  static replaceAll(bigStr, str1, str2) { //把bigStr中的所有str1替换为str2\r\n    var reg = new RegExp(str1, 'gm');\r\n    return bigStr.replace(reg, str2);\r\n  };\r\n  /**\r\n   * 下载图片\r\n   * @static\r\n   * @param {*} imgSrc 图片网络地址\r\n   * @param {*} dirName 存储目录\r\n   * @param {*} anstitle 问题名称\r\n   * @param {boolean} [isGif=false] 是否为Gif\r\n   * @returns\r\n   * @memberof Handle\r\n   */\r\n  static startDownloadTask(imgSrc, dirName, anstitle, isGif = false) {\r\n    if (isGif) {\r\n      dirName = this.replaceAll(dirName, '.jpg', '.gif')\r\n      imgSrc = this.replaceAll(imgSrc, '.jpg', '.gif')\r\n    }\r\n    let self = this;\r\n    //返回一个promise对象才可以调用then等函数\r\n    return new Promise(function(resolve, reject) {\r\n      setTimeout(() => {\r\n        if (imgSrc.indexOf('http') !== -1) {\r\n          //回调\r\n          // let req = https.request(imgSrc, this.getHttpReqCallback(imgSrc, dirName, anstitle));\r\n          let req = https.request(imgSrc, (res) => {\r\n            var fileBuff = [];\r\n            res.on('data', chunk => {\r\n              var buffer = new Buffer(chunk);\r\n              fileBuff.push(buffer);\r\n            });\r\n            res.on('end', () => {\r\n              var totalBuff = Buffer.concat(fileBuff);\r\n              fs.appendFile(dirName, totalBuff, err => {\r\n                if (err) {\r\n                  reject(err);\r\n                  console.log(`路径：${imgSrc}获取答案出错:${err}`);\r\n                } else {\r\n                  console.log(` ${++self.DOWNLOAD_INDEX_NUM} ■■ 标题:${anstitle}, ■■ 路径: ${dirName.substr(dirName.lastIndexOf('\/\/\/\/')+1)} ■■ download success！`);\r\n                  resolve();\r\n                }\r\n              });\r\n            });\r\n          });\r\n          //报错\r\n          req.on('error', function(error) { reject(error); });\r\n          //超时\r\n          req.setTimeout(20 * 1000, function() {\r\n            console.log(`请求${imgSrc}超时,结束当前请求！`);\r\n            fs.appendFile(dirName.substr(0, dirName.lastIndexOf('/')) + '/错误日志.txt', '请求超时：' + imgSrc + '\/\/r\/\/n');\r\n            req.abort();\r\n            reject(\"超时请求\");\r\n          });\r\n          req.end();\r\n        } else {\r\n          reject(\"不存在值\")\r\n        };\r\n      }, 0);\r\n    });\r\n  };\r\n  /**\r\n   * 并发下载文件\r\n   *\r\n   * @static\r\n   * @param {*} list 包含url,path,title属性\r\n   * @param {*} num 每次同时下载数量\r\n   * @memberof Handle\r\n   */\r\n  static async handleDown(list, num) {\r\n    Handler.log(`当前一共■■ ${list.length} ■■个文件,并发量为■■ ${num} ■■`);\r\n    for (let index = 0; index < list.length; index += num) {\r\n      let arr = [];\r\n      for (let i = 0; i < num; i++) {\r\n        let obj = list[index + i];\r\n        if (obj) {\r\n          arr.push(Handler.startDownloadTask(obj.url, obj.path, obj.title, IS_GIF));\r\n        }\r\n      }\r\n      try {　　\r\n        await Promise.all(arr).then(\r\n          () => console.log(`✲✲✲✲✲✲✲✲✲完成 ${arr.length} 个✲✲✲✲✲✲✲✲✲✲✲`),\r\n          err => console.log(err)\r\n        );\r\n      } catch (error) {　　\r\n        console.log(error);　　\r\n      }\r\n    }\r\n  }\r\n  /**\r\n   * 请求JSON时用到\r\n   *\r\n   * @param {*} { url = \"\", method = \"post\" } 传递地址和请求方式\r\n   * @returns\r\n   */\r\n  static getJSON(url = \"\", method = \"post\") {\r\n    //URL地址\r\n    return new Promise(function(resolve, reject) {\r\n      nodegrass[method](url, (data, status, headers) => {\r\n        if (data) {\r\n          resolve(data);\r\n        } else {\r\n          reject(`地址:${url}获取失败,请检查程序`);\r\n        }\r\n      })\r\n    });\r\n  }\r\n  /**\r\n   * 获取页面信息并返回\r\n   * @param {*} url 请求的页面地址\r\n   */\r\n  static getPage(url) {\r\n    //返回一个promise对象才可以调用then等函数\r\n    return new Promise(function(resolve, reject) {\r\n      let questionId = url.substr(url.lastIndexOf('/') + 1);\r\n      nodegrass.get(url, (data, status, headers) => {\r\n        if (!data) {\r\n          reject(error);\r\n        } else {\r\n          resolve(data);\r\n        }\r\n      });\r\n    });\r\n  }\r\n}\r\nHandle.DOWNLOAD_INDEX_NUM = 0;\r\nmodule.exports = Handle;"
+    ],
+    "description": "spider-工具类"
+  },
+  "spider": {
+    "prefix": "spider-爬虫相关代码➷➷➷♞",
+    "body": [
+      "/*\r\n * @Author:马少博 (ma.shaobo@qq.com)\r\n * @note: async 版获取\r\n * @Last Modified by: 马少博\r\n * @Last Modified time:2018年6月4日11:26:56\r\n */\r\nlet nodegrass = require('nodegrass');\r\nlet Handler = require('./handle');\r\nlet path = require('path');\r\nlet fs = require(\"fs\");\r\nlet cheerio = require('cheerio');\r\nconst START_INDEX = 0; //从第几页开始请求\r\nconst PAGE_COUNT = 10; //每次爬虫处理多少页\r\nconst IS_GIF = false; //是否为GIF格式下载\r\nconst MIN_DIANZAN = 0; //最小点赞数\r\nconst USER_INPUT = \"41710758\"; //用户输入内容\r\n//开始调用方法\r\n// startSpider();\r\ngetJSON('https://music.163.com/discover/playlist/?cat=%E8%AF%B4%E5%94%B1', 'get').then(data => console.log(data));\r\n/**\r\n * 获取到问题基本信息后,开始遍历答案\r\n * @param {*} pageInfo 初步抓取页面获取到的信息\r\n */\r\nasync function startSpider(pageInfo) {\r\n  for (let json_index = START_INDEX; json_index < START_INDEX + PAGE_COUNT; json_index++) {\r\n    let data = await getJSON('https://500px.me/community/contest/cb9bea96466f4dc39f5d5fe2d927a5f8/photos?orderby=createdTime&type=json&page=' + (json_index + 1) + '&size=20').then(data => JSON.parse(data).data);\r\n    for (let i = 0; i < data.length; i++) {\r\n      let obj = data[i];　\r\n      let url = `https://500px.me/community/tag?photoId=${obj.id}&startTime=&page=1&size=200&type=json`\r\n      let list = await getJSON(url).then(data => JSON.parse(data));\r\n      let imgList = []\r\n      Handler.createDir(`./img/临时存储`);\r\n      list.forEach((element, index) => {\r\n        imgList.push({\r\n          url: element.url.baseUrl + '!p5',\r\n          path: path.resolve(__dirname, `./临时存储/${element.title}-${index}${element.url.baseUrl.substr(-10)}`),\r\n          title: element.title\r\n        });\r\n      });\r\n      try {　\r\n        //并发抓取\r\n        await handleDown(imgList, 3);\r\n      } catch (error) {　　\r\n        console.log(`■■■当前捕捉到的错误为:\/\/r\/\/n${error}\/\/r\/\/n`);　　\r\n      }\r\n    }\r\n  };\r\n}\r\n/*\r\n██████╗  █████╗  ██████╗ ███████╗\r\n██╔══██╗██╔══██╗██╔════╝ ██╔════╝\r\n██████╔╝███████║██║  ███╗█████╗\r\n██╔═══╝ ██╔══██║██║   ██║██╔══╝\r\n██║     ██║  ██║╚██████╔╝███████╗\r\n╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝\r\n*/\r\n/*\r\n'########:::::'###:::::'######:::'########:\r\n ##.... ##:::'## ##:::'##... ##:: ##.....::\r\n ##:::: ##::'##:. ##:: ##:::..::: ##:::::::\r\n ########::'##:::. ##: ##::'####: ######:::\r\n ##.....::: #########: ##::: ##:: ##...::::\r\n ##:::::::: ##.... ##: ##::: ##:: ##:::::::\r\n ##:::::::: ##:::: ##:. ######::: ########:\r\n..:::::::::..:::::..:::......::::........::\r\n*/\r\n/**\r\n * 获取页面信息并返回\r\n * @param {*} url 请求的页面地址\r\n */\r\nfunction getPage(url) {\r\n  //返回一个promise对象才可以调用then等函数\r\n  return new Promise(function(resolve, reject) {\r\n    let questionId = url.substr(url.lastIndexOf('/') + 1);\r\n    nodegrass.get(url, (data, status, headers) => {\r\n      if (!data) {\r\n        reject(error);\r\n      } else {\r\n        resolve(pageInfoParse(data));\r\n      }\r\n    });\r\n  });\r\n}\r\n/**\r\n * 处理页面信息 (转化为可用对象)\r\n * @returns \r\n */\r\nfunction pageInfoParse(data) {\r\n  let $ = cheerio.load(data);\r\n  let anstitle = Handler.handleTitle($(data).find('title').text().trim());\r\n  Handler.log(anstitle);\r\n  //返回答案数,获取纯数字\r\n  let answerCount = Handler.getNum($(data).find('.List-headerText span').text());\r\n  Handler.log(`当前答案回答数:${answerCount}`);\r\n  let pageInfo = {\r\n    ansCount: answerCount,\r\n    questionId: questionId,\r\n    anstitle: anstitle\r\n  }\r\n  return pageInfo;\r\n}\r\n/*\r\n     ██╗███████╗ ██████╗ ███╗   ██╗\r\n     ██║██╔════╝██╔═══██╗████╗  ██║\r\n     ██║███████╗██║   ██║██╔██╗ ██║\r\n██   ██║╚════██║██║   ██║██║╚██╗██║\r\n╚█████╔╝███████║╚██████╔╝██║ ╚████║\r\n ╚════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═══╝\r\n*/\r\n/*\r\n::::::'##::'######:::'#######::'##::: ##:\r\n:::::: ##:'##... ##:'##.... ##: ###:: ##:\r\n:::::: ##: ##:::..:: ##:::: ##: ####: ##:\r\n:::::: ##:. ######:: ##:::: ##: ## ## ##:\r\n'##::: ##::..... ##: ##:::: ##: ##. ####:\r\n ##::: ##:'##::: ##: ##:::: ##: ##:. ###:\r\n. ######::. ######::. #######:: ##::. ##:\r\n:......::::......::::.......:::..::::..::\r\n*/\r\n/**\r\n * 请求JSON时用到\r\n *\r\n * @param {*} { url = \"\", method = \"post\" } 传递地址和请求方式\r\n * @returns\r\n */\r\nfunction getJSON(url = \"\", method = \"post\") {\r\n  //URL地址\r\n  return new Promise(function(resolve, reject) {\r\n    nodegrass[method](url, (data, status, headers) => {\r\n      if (data) {\r\n        resolve(data);\r\n      } else {\r\n        reject(`地址:${url}获取失败,请检查程序`);\r\n      }\r\n    })\r\n  });\r\n}\r\n/*\r\n██████╗  ██████╗ ██╗    ██╗███╗   ██╗\r\n██╔══██╗██╔═══██╗██║    ██║████╗  ██║\r\n██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║\r\n██║  ██║██║   ██║██║███╗██║██║╚██╗██║\r\n██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║\r\n╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝\r\n*/\r\n/*\r\n'########:::'#######::'##:::::'##:'##::: ##:\r\n ##.... ##:'##.... ##: ##:'##: ##: ###:: ##:\r\n ##:::: ##: ##:::: ##: ##: ##: ##: ####: ##:\r\n ##:::: ##: ##:::: ##: ##: ##: ##: ## ## ##:\r\n ##:::: ##: ##:::: ##: ##: ##: ##: ##. ####:\r\n ##:::: ##: ##:::: ##: ##: ##: ##: ##:. ###:\r\n ########::. #######::. ###. ###:: ##::. ##:\r\n........::::.......::::...::...:::..::::..::\r\n*/\r\n/**\r\n * 图片下载列表\r\n * @param {*} list 包含url,path,title属性\r\n * @param {*} num\r\n */\r\nasync function handleDown(list, num) {\r\n  Handler.log(`当前一共■■ ${list.length} ■■个文件,并发量为■■ ${num} ■■`);\r\n  for (let index = 0; index < list.length; index += num) {\r\n    let arr = [];\r\n    for (let i = 0; i < num; i++) {\r\n      let obj = list[index + i];\r\n      if (obj) {\r\n        arr.push(Handler.startDownloadTask(obj.url, obj.path, obj.title, IS_GIF));\r\n      }\r\n    }\r\n    try {　　\r\n      await Promise.all(arr).then(\r\n        () => console.log(`✲✲✲✲✲✲✲✲✲完成 ${arr.length} 个✲✲✲✲✲✲✲✲✲✲✲`),\r\n        err => console.log(err)\r\n      );\r\n    } catch (error) {　　\r\n      console.log(error);　　\r\n    }\r\n  }\r\n}"
+    ],
+    "description": "爬虫相关代码"
+  }
+}

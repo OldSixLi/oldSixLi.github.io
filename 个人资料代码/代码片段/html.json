@@ -1,0 +1,224 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log('$1');",
+      "$2"
+    ],
+    "description": "自定义输出"
+  },
+  "代码片段补充": {
+    "prefix": "buju",
+    "body": [
+      "http://nec.netease.com/library/category/#grid 布局代码片段",
+      "$2"
+    ],
+    "description": "常用的代码片段这里都有"
+  },
+  "startendTimeBlock": {
+    "prefix": "timestartblock--start",
+    "body": [
+      "<div class=\"input-group timeblock\">\r\n \r\n            <div class=\"input-group-btn\">\r\n              <button type=\"button\" class=\"btn btn-default\" id=\"btnStarttime\">\r\n                <span class=\"glyphicon glyphicon-calendar\"></span></button>\r\n            </div>\r\n          </div>"
+    ],
+    "description": "开始时间选择框"
+  },
+  " endTimeBlock": {
+    "prefix": "timeendblock--end",
+    "body": [
+      "<div class=\"input-group timeblock\">\r\n \r\n            <div class=\"input-group-btn\">\r\n              <button type=\"button\" class=\"btn btn-default\" id=\"btnEndtime\">\r\n                <span class=\"glyphicon glyphicon-calendar\"></span></button>\r\n            </div>\r\n          </div>"
+    ],
+    "description": "结束时间选择框"
+  },
+  "HTML开始": {
+    "prefix": "kaishi",
+    "body": ["<!-- 马少博  创建于 ${1:Date} -->\r\n<!DOCTYPE html>\r\n<html lang='en'>\r\n<head>\r\n  <meta charset='utf-8'>\r\n  <meta http-equiv='X-UA-Compatible' content='IE=edge'>\r\n  <meta name='viewport' content='width=device-width, initial-scale=1'>\r\n  <link rel='shortcut icon' href='https://raw.githubusercontent.com/OldSixLi/ListPage/master/public/images/my.ico' />\r\n  <title> ${2:标题}</title>\r\n  <link href='http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet'>\r\n</head>\r\n<body>\r\n  $4\r\n  <!-- 脚本 -->\r\n  <!-- <script src='http://cdn.bootcss.com/angular.js/1.4.1/angular.js'></script> -->\r\n  <!-- <script src='https://cdn.bootcss.com/vue/2.3.3/vue.js'></script> -->\r\n   <script src='http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js'></script>\r\n  <script src='http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>\r\n <script>\r\n    var filePath = ''; //此处填写相对于public/的目录\r\n  </script>\r\n   <script src='https://rawgit.com/OldSixLi/ResourceOnLine/master/webscoket/ScoketByMa.js'></script>\r\n  </body>\r\n</html>"],
+    "description": "自定义HTML模板By马少博"
+  },
+
+  "HTML-Vue.js开始": {
+    "prefix": "kaishi-vue",
+    "body": [
+      "<!-- 马少博  创建于 ${1:时间} -->\r\n<!DOCTYPE html>\r\n<html lang='en'>\r\n<head>\r\n  <meta charset='utf-8'>\r\n  <meta http-equiv='X-UA-Compatible' content='IE=edge'>\r\n  <meta name='viewport' content='width=device-width, initial-scale=1'>\r\n  <link rel='shortcut icon' href='https://raw.githubusercontent.com/OldSixLi/ListPage/master/public/images/my.ico' />\r\n  <title> ${2:标题}</title>\r\n  <link href='http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet'>\r\n</head>\r\n<body>\r\n  <!--NOTE 此处声明Vue-->\r\n  <div id=\"${3:vueBlock}\">\r\n  $4\r\n  </div>\r\n  <!-- 脚本 -->\r\n  <script src='https://cdn.bootcss.com/vue/2.3.3/vue.js'></script>\r\n  <script src='http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js'></script>\r\n  <script src='http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>\r\n  <script>\r\n    var ${3:vueBlock} = new Vue({\r\n      el: \"#${3:vueBlock}\",\r\n      //数据部分 \r\n      data() {},\r\n      //方法\r\n      methods: {},\r\n      //过滤器\r\n      filters: {},\r\n      //实时计算\r\n      computed: {},\r\n      //加载后立即执行的方法(created 这个钩子在实例被创建之后被调用)\r\n      created: function() {}\r\n    });\r\n  </script>\r\n</body>\r\n</html>"
+    ],
+    "description": "自定义Vue.js-HTML模板By马少博"
+  },
+  "自定义图片": {
+
+    "prefix": "img-mashaobo",
+    "body": ["<img src='http://om6fr85l4.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20171127173411.jpg' class='img-responsive img-thumbnail' alt='自定义$2'>"],
+    "description": "自定义图片"
+  },
+  "xs布局": {
+    "prefix": "xs",
+    "body": ["<div class=\"col-xs-$1\"></div>"],
+    "description": "xs布局"
+  },
+  "sm布局": {
+    "prefix": "sm",
+    "body": ["<div class=\"col-sm-$1\"></div>"],
+    "description": "sm布局"
+  },
+  "md布局": {
+    "prefix": "md",
+    "body": ["<div class=\"col-md-$1\"></div>"],
+    "description": "md布局"
+  },
+  "lg布局": {
+    "prefix": "lg",
+    "body": ["<div class=\"col-lg-$1\"></div>"],
+    "description": "lg布局"
+  },
+  "row行布局": {
+    "prefix": "row",
+    "body": ["<div class=\"row\"><!-- 消除外边距 -->\r\n<div class=\"col-md-12\">$1</div>\r\n</div>"],
+    "description": "row行布局"
+  },
+  "Vue-row行布局": {
+    "prefix": "rowvue",
+    "body": ["<el-row :gutter=\"${1:10}\" class=\"\">\r\n   <el-col :span=\"${2:12}\" class=\"\"></el-col>\r\n   <el-col :span=\"${3:12}\" class=\"\"></el-col>\r\n</el-row>"],
+    "description": "Vue-row行布局"
+  },
+  "Vue-transition": {
+    "prefix": "transition-Ele-自带效果版",
+    "body": [" <transition name=\"el-zoom-in-top\">\r\n        \r\n  </transition>"],
+    "description": "Vue-transition标签"
+  },
+  "3333布局": {
+    "prefix": "col3333",
+    "body": [" <div class=\"row\">\r\n          <div class=\"col-md-3\">$1</div>\r\n          <div class=\"col-md-3\"></div>\r\n          <div class=\"col-md-3\"></div>\r\n          <div class=\"col-md-3\"></div>\r\n        </div>"],
+    "description": "COL-3-3-3-3布局"
+  },
+  "Bootstrap-container布局": {
+    "prefix": "container",
+    "body": ["<div class=\"container\">\r\n    <div class=\"row\">\r\n      <!-- 消除外边距 -->\r\n      <div class=\"col-md-4 col-sm-4\">\r\n        <!--在此处编辑内容-->\r\n        $1\r\n      </div>\r\n      <div class=\"col-md-4 col-sm-4\">\r\n        <!--在此处编辑内容-->\r\n        $2\r\n      </div>\r\n      <div class=\"col-md-4 col-sm-4\">\r\n        <!--在此处编辑内容-->\r\n        $3\r\n      </div>\r\n    </div>\r\n  </div>"],
+    "description": "Bootstrap-container布局"
+  },
+  "444布局": {
+    "prefix": "col444",
+    "body": ["<div class=\"row\">\r\n    <div class=\"col-md-4\"></div>\r\n    <div class=\"col-md-4\"></div>\r\n    <div class=\"col-md-4\"></div>\r\n  </div>"],
+    "description": "COL-4-4-4布局"
+  },
+  "Bootstrap-panel布局": {
+    "prefix": "panel-mashaobo",
+    "body": ["<div class=\"panel panel-default\">\r\n      <div class=\"panel-heading\">${1:标题}</div>\r\n      <div class=\"panel-body\" style=\"padding:0;\">\r\n        $2\r\n      </div>\r\n    </div>"],
+    "description": "Bootstrap-panel布局By马"
+  },
+  "282布局": {
+    "prefix": "col282",
+    "body": ["<div class=\"row\">\r\n    <div class=\"col-md-2\"></div>\r\n    <div class=\"col-md-8\"></div>\r\n    <div class=\"col-md-2\"></div>\r\n  </div>"],
+    "description": "COL-2-8-2布局"
+  },
+  "Element框架<el-row>布局": {
+    "prefix": ["row-Element框架➷➷➷♞","rowvue➷➷➷♞","div-<el-row>-Vue框架➷➷➷♞","elrow-<el-row>-Vue框架➷➷➷♞"],
+    "body": "<!--NOTE 响应式设置 :xs=\"8\" :sm=\"6\" :md=\"4\" :lg=\"3\" :xl=\"1\" -->\r\n    <el-row :gutter=\"${1:10}\">\r\n      <el-col :span=\"${2:12}\" :offset=\"${3:0}\"></el-col>\r\n    </el-row>",
+    "description": "Element框架<el-row>布局"
+  },
+  "TABLE": {
+    "prefix": "table-Bootstrap布局",
+    "body": ["<!--table-bordered   边框\r\n      table-condensed  收缩\r\n      table-striped    斑马色-->\r\n  <table class=\"table table-hover ${1:table-bordered} ${2:table-condensed} ${3:table-striped}\">\r\n    <thead>\r\n      <tr>\r\n        <th>#</th>\r\n        <th>第一列</th>\r\n        <th>第二列</th>\r\n        <th>第三列</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>1</td>\r\n        <td>数据1</td>\r\n        <td>数据2</td>\r\n        <td>数据3</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>"],
+    "description": "Bootstrap Table布局"
+  },
+  "Bootstrap-Modal": {
+    "prefix": "modalbuju-Bootstrap布局➷➷➷♞",
+    "body": ["<!--按钮  移动到其他DOM中-->\r\n<a class=\"btn btn-primary\" data-toggle=\"modal\" href=\"#modal\">模态框</a>\r\n<!--按钮END-->\r\n  <div class=\"modal fade\" id=\"modal\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>\r\n          <h4 class=\"modal-title\">modal标题</h4>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form class=\"form-horizontal\" role=\"form\">\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-2 text-right\"><label for=\"inputEmail3\" class=\"control-label\">Email</label></div>\r\n              <div class=\"col-sm-10\"><input type=\"text\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Email\"></div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <div class=\"col-sm-2 text-right\"><label for=\"inputPassword3\" class=\"control-label\">Password</label></div>\r\n              <div class=\"col-sm-10\"><input type=\"text\" class=\"form-control\" id=\"inputPassword3\" placeholder=\"Password\"></div>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <a class=\"btn btn-default\" data-dismiss=\"modal\">Close</a>\r\n          <a class=\"btn btn-primary\">Save changes</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <script>\r\n    $(\"#modal\").modal({　\r\n      show: false, //默认是否展示\r\n      backdrop: ${1:false}, //隐藏背景\r\n      keyboard: false\r\n    });\r\n  </script>"],
+    "description": "Bootstrap Modal布局--马少博"
+  },
+
+  "rawgit": {
+    "prefix": "raw",
+    "body": [
+      " <!-- https://rawgit.com/ -->\r\n <!-- http://www.bootcdn.cn/ -->\r\n <!--贴你github上的文件地址，就能自动变成CDN地址 -->"
+    ],
+    "description": "github自动变成CDN地址"
+  },
+  "qiniu-upload": {
+    "prefix": "qiniuupload",
+    "body": [
+      "<div class=\"col-md-3\" id=\"btn-uploader\">\r\n    <img id=\"img\" src='http://usr.im/350x200?text=文字说明' class='img-responsive img-thumbnail' alt='自定义'>\r\n    <button type=\"button\" class=\"btn btn-default btn-sm btn-block\" id=\"pickfiles\">上传默认日程背景</button>\r\n    <input type=\"hidden\" name=\"iconUrl\" id=\"iconUrl\" value=\"\">\r\n  </div>\r\n  <!-- 脚本 -->\r\n  <script src='http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js'></script>\r\n  <script src=\"https://cdn.rawgit.com/OldSixLi/oldSixLi.github.io/master/script/QiniuCloud/plupload.full.min.js\"></script>\r\n  <script src=\"https://cdn.rawgit.com/OldSixLi/oldSixLi.github.io/master/script/QiniuCloud/moxie.js\"></script>\r\n  <script src=\"https://cdn.rawgit.com/OldSixLi/oldSixLi.github.io/master/script/QiniuCloud/qiniu.min.js\"></script>\r\n  <script>\r\n    var domainUrl = \"http://om6fr85l4.bkt.clouddn.com/\"; //←←←←←←←修改上传的空间地址←←←←←←←\r\n    //获取七牛uptoken　\r\n    uploader = Qiniu.uploader({\r\n      runtimes: 'html5,flash,html4',\r\n      browse_button: 'pickfiles', //上传按钮的ID\r\n      container: 'btn-uploader', //上传按钮的上级元素ID\r\n      drop_element: 'btn-uploader',\r\n      max_file_size: '100mb', //最大文件限制　\r\n      dragdrop: false,\r\n      chunk_size: '4mb', //分块大小  \r\n      save_key: true,\r\n      uptoken_func: function() { // 在需要获取uptoken时，该方法会被调用　\r\n        var token = \"\";\r\n        $.ajax({\r\n          type: \"get\",\r\n          url: \"/token\", //←←←←←←←修改请求token的地址←←←←←←←\r\n          async: false,\r\n          dataType: \"json\",\r\n          success: function(data) {\r\n            token = data.uptoken; //←←←←←←←修改字段名称←←←←←←←\r\n          }\r\n        });\r\n        return token;\r\n      },\r\n      unique_names: false,\r\n      domain: domainUrl, //自己的七牛云存储空间域名\r\n      multi_selection: false, //是否允许同时选择多文件\r\n      //文件类型过滤，这里限制为图片类型\r\n      filters: {\r\n        mime_types: [{\r\n          title: \"Image files\",\r\n          extensions: \"jpg,jpeg,gif,png\"\r\n        }]\r\n      },\r\n      auto_start: true,\r\n      init: {\r\n        'FilesAdded': function(up, files) {\r\n          //do something\r\n        },\r\n        'BeforeUpload': function(up, file) {\r\n          //do something\r\n        },\r\n        'UploadProgress': function(up, file) {\r\n          //可以在这里控制上传进度的显示\r\n          console.log(up);\r\n          console.log(file);\r\n          //可参考七牛的例子\r\n        },\r\n        'UploadComplete': function() {\r\n          //do something\r\n        },\r\n        'FileUploaded': function(up, file, info) {　\r\n          var json = JSON.parse(info);\r\n          alert(\"上传成功\");\r\n          //图片压缩处理:限制图片长宽均为200px ,且图片质量为原来75%;←←←←←←←图片质量自定义\r\n          // ?imageView2/1/w/350/h/200/q/100|imageslim //设置长度宽度\r\n          var imgSrc = domainUrl + json.key + \"?imageView2/1/q/100|imageslim\";\r\n          $(\"#img\").attr(\"src\", imgSrc);\r\n          $(\"[name='iconUrl']\").val(imgSrc);\r\n        },\r\n        'Error': function(up, err, errTip) {\r\n          alert(errTip);\r\n        },\r\n        'Key': function(up, file) {\r\n          return file.name;\r\n        }\r\n      }\r\n    });\r\n  </script>"
+    ],
+    "description": "七牛云上传图片代码-马少博"
+  },
+  "radio": {
+    "prefix": "radio-zujian",
+    "body": [
+      "    <input type=\"radio\" name=\"${1:role}\" ng-model=\"model.${1:role}\" value=\"1\">TODO1&nbsp;&nbsp;\r\n    <input type=\"radio\" name=\"${1:role}\" ng-model=\"model.${1:role}\" value=\"2\">TODO2&nbsp;&nbsp;\r\n    <input type=\"radio\" name=\"${1:role}\" ng-model=\"model.${1:role}\" value=\"3\">TODO3&nbsp;&nbsp;\r\n    <script>\r\n      // 取值：\r\n      var radioVal = $('input:radio[name=${1:role}]:checked').val();\r\n  $(\"input:radio[name='dialCheckResult']\").eq(0).attr(\"checked\", true);\r\n   </script>"
+    ],
+    "description": "radio组件与取值"
+  },
+  "form表单": {
+    "prefix": "formbiaodan-mashaobo",
+    "body": [
+      "<!--横向form-->\r\n  <form class=\"form-horizontal\" role=\"form\" name=\"addForm\">\r\n    <!--输入框-->\r\n    <div class=\"form-group\">\r\n      <div class=\"${1:col-sm-4} text-right\"><label for=\"inputEmail3\" class=\"control-label\">姓名</label></div>\r\n      <div class=\"${2:col-sm-8}\">\r\n        <input type=\"text\" class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"请输入姓名\"></div>\r\n    </div>\r\n    <!--radio类型-->\r\n    <div class=\"form-group\">\r\n      <div class=\"${1:col-sm-4} text-right\">\r\n        <label for=\"inputPassword3\" class=\"control-label\">权限</label>\r\n      </div>\r\n      <div class=\"${2:col-sm-8}\" style=\"line-height:35px;\">\r\n        <label class=\"control-label\"><input type=\"radio\" name=\"role\" value=\"1\">会籍顾问&nbsp;&nbsp;</label>\r\n        <label class=\"control-label\"><input type=\"radio\" name=\"role\" value=\"2\">运动专家&nbsp;&nbsp;</label>\r\n        <label class=\"control-label\"><input type=\"radio\" name=\"role\" value=\"3\">饮食专家&nbsp;&nbsp;</label>\r\n      </div>\r\n    </div>\r\n    <!--checkBox类型-->\r\n    <div class=\"form-group\">\r\n      <div class=\"${1:col-sm-4} text-right\">\r\n        <label for=\"inputEmail3\" class=\"control-label\">水果类型</label>\r\n      </div>\r\n      <div class=\"${2:col-sm-8}\">\r\n        <label class=\"control-label\"><input name=\"fruit\" type=\"checkbox\" value=\"1\" />苹果 </label>\r\n        <label class=\"control-label\"><input name=\"fruit\" type=\"checkbox\" value=\"2\" />桃子 </label>\r\n        <label class=\"control-label\"><input name=\"fruit\" type=\"checkbox\" value=\"3\" />香蕉 </label>\r\n      </div>\r\n    </div>\r\n    <div class=\"form-group\">\r\n      <div class=\"col-sm-12 text-right\">\r\n        <a class=\"btn btn-primary\" href=\"javascript:save()\">保存</a>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <script>\r\n    function save() {\r\n      var saveInfo = {\r\n        //文本框,下拉菜单选择值\r\n        name: $.trim($(\"#name\").val()),\r\n        //单选框值\r\n        role: $(\"[name='role']\").val(),\r\n        //复选框选择值\r\n        fruit: getCheckBoxValue(\"fruit\")\r\n      };\r\n      var __error = [];\r\n      if (saveInfo.name == \"\") {\r\n        __error.push(\"错误提示！\");\r\n      }\r\n      if (__error.length > 0) {\r\n        tool.alert(\"提示\", __error.join(\"<br />\"));\r\n        return false;\r\n      }\r\n      $.ajax({\r\n        type: \"POST\",\r\n        url: \"url\",\r\n        data: saveInfo,\r\n        dataType: \"json\",\r\n        success: function(data, textStatus, jqXHR) {\r\n          if (data != null && data != \"\") {\r\n            if (data.success) {\r\n              tool.alert(\"提示\", \"保存成功\");\r\n            } else {\r\n              tool.alert(\"提示\", \"保存失败\");\r\n            }\r\n          } else {\r\n            //NOTE 数据为空时提示 \r\n            tool.alert(\"提示\", \"未获取到数据!\");\r\n          }\r\n        },\r\n        error: function(response) {\r\n          //NOTE 获取服务出错时提示\r\n          tool.alert(\"提示\", \"请求服务失败,请重试!\");\r\n        },\r\n        complete: function(xhr, textStatus) {\r\n          //NOTE 异步事件完成后需要操作的内容\r\n        }\r\n      });\r\n    }\r\n    //获取多选框的值\r\n    function getCheckBoxValue(name) {\r\n      var obj = document.getElementsByName(name); //选择所有name=\"'test'\"的对象，返回数组\r\n      //取到对象数组后，我们来循环检测它是不是被选中\r\n      var s = [];\r\n      for (var i = 0; i < obj.length; i++) {\r\n        if (obj[i].checked) {\r\n          s.push(obj[i].value); //如果选中，将value添加到变量s中\r\n        }\r\n      }\r\n      return s.join(',');\r\n    }\r\n  </script>"
+    ],
+    "description": "Form表单的HTML与JS"
+  },
+  "inputgroup": {
+    "prefix": "inputgroup-mashaobo",
+    "body": [
+      "<div class=\"input-group\">\r\n  <span class=\"input-group-addon\">$</span>\r\n  <input type=\"text\" class=\"form-control\" aria-label=\"Amount (to the nearest dollar)\">\r\n  <span class=\"input-group-addon\">.00</span>\r\n</div>"
+    ],
+    "description": "Bootstrap InputGroup输入框组--by马少博"
+  },
+  "zidongshuaxin": {
+    "prefix": "zidongshuaxin-mashaobo",
+    "body": [
+      "  <!--自动刷新页面的代码-->\r\n  <script>\r\n    var filePath = 'Doc/test.html'; //当前文件名，此处填写相对于public/的目录\r\n  </script>\r\n  <script src='https://rawgit.com/OldSixLi/ResourceOnLine/master/webscoket/ScoketByMa.js'></script>"
+    ],
+    "description": "用于网页自动刷新的代码-- 马少博"
+  },
+  "分隔字符串 ": {
+    "prefix": "fenge-mashaobo",
+    "body": [
+      "// ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆\r\n    // ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆\r\n    // ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆\r\n    // ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆"
+    ],
+    "description": "将一块块的代码分隔开"
+  },
+  "checkbox形式 ": {
+    "prefix": "checkbox-示例HTMl代码",
+    "body": [
+      "<input type=\"checkbox\" value=\"1\" name=\"${1:orderItem}\" id=\"${1:orderItem}1\">\r\n  <input type=\"checkbox\" value=\"2\" name=\"${1:orderItem}\" id=\"${1:orderItem}2\">\r\n  <input type=\"checkbox\" value=\"3\" name=\"${1:orderItem}\" id=\"${1:orderItem}3\">"
+    ],
+    "description": "checkbox-示例HTMl代码"
+  },
+  "浩天table": {
+    "prefix": "httable组件--马少博",
+    "body": [
+      " <ht-table :ajaxurl=\"ajaxurl\" :search-data=\"searchData\">\r\n          <!--内部组件-->\r\n          <column slot name=\"名称\" data-key=\"id,userName\"></column>\r\n          <column slot name=\"性别\" data-key=\"gender\"></column>\r\n          <column slot name=\"时间\" data-key=\"createAt\"></column>\r\n          <column slot name=\"头像\" data-key=\"iconUrl\"></column>\r\n          <column slot name=\"编辑\" data-key=\"id,userName,gender\" align=\"center\" width=\"25%\" filter=\"TODO\"></column>\r\n        </ht-table>\r\n        <script>\r\n          /**\r\n           * 当前对象为将参数转化为Html的方法集合\r\n           * @returns\r\n           */\r\n          var HtmlFun = {\r\n            /**\r\n             * 转化为图片代码\r\n             * @returns\r\n             */\r\n            toImg: function(value) {\r\n              return \"<img src='\" + value + \"'/>\";\r\n            },\r\n            /**\r\n             * 时间戳转化为正常时间 \r\n             * @param {any} shijianchuo  时间戳 精确到毫秒\r\n             * @returns 正常时间\r\n             */\r\n            toNormalTime: function(shijianchuo) {\r\n              var time = new Date(parseInt(shijianchuo));\r\n              var y = time.getFullYear();\r\n              var m = time.getMonth() + 1;\r\n              var d = time.getDate();\r\n              var h = time.getHours();\r\n              var mm = time.getMinutes();\r\n              var s = time.getSeconds();\r\n              return y + '-' + this.add0(m) + '-' + this.add0(d) + ' ' + this.add0(h) + ':' + this.add0(mm) + ':' + this.add0(s);\r\n            },\r\n            toGender: function(value) {\r\n              return value == \"M\" ? \"男\" : \"女\";\r\n            }\r\n          }\r\n          var TODO = new Vue({\r\n            el: \"#TODO\",\r\n            //数据部分\r\n            data: {\r\n              ajaxurl: \"TODO\",\r\n              searchData: {\r\n                currentPage: 0\r\n              }\r\n            },\r\n            //方法\r\n            methods: {\r\n              toSearch: function() {\r\n                //NOTE 此处调用时必须声明page的参数\r\n                this.searchData = {\r\n                  currentPage: 0\r\n                };\r\n              }\r\n            }\r\n          });\r\n        </script>"
+    ],
+    "description": "httable组件--马少博"
+  },
+  "table-frontWeb": {
+    "prefix": "table-前台网站➷➷➷♞",
+    "body": [
+      "<input type=\"hidden\" id=\"currentPage\" name=\"page\" value=\"1\">\r\n            <div style=\"background-color: #fff;\">\r\n              <table class=\"table table-hover per-table-nodata per-table\" id=\"searchTable\">\r\n                <thead>\r\n                  <tr>\r\n                    <th class=\"text-center\">#</th>\r\n                    <th class='text-center'>名称</th>\r\n                    <th class='text-center'>类型</th>\r\n                    <th class='text-center'>有效期至</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody id=\"tBodyResult\">\r\n                  <tr>\r\n                    <td colspan=\"100\">\r\n                      <div class=\"per-nodata\">\r\n                        <div class=\"per-nodata-img\"></div>\r\n                      </div>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n            <div class=\"pagination-block text-center per-pagination-block\" id=\"pageBlock\">\r\n              <ul class=\"pagination per-page light-theme simple-pagination\" id=\"page\"></ul>\r\n              <div class=\"per-pageinfo\" id=\"pageinfo\" style=\"display: block;\"></div>\r\n            </div>"
+    ],
+    "description": "前台网站table样式"
+  },
+  "居中": {
+    "prefix": "center-元素居中(掘金文章)➷➷➷♞",
+    "body": [
+      "//居中文章介绍  https://juejin.im/post/58f818bbb123db006233ab2a\r\n代码演示  https://www.imooc.com/article/28580"
+    ],
+    "description": "元素居中"
+  },
+  "kaishi": {
+    "prefix": "kaishivue",
+    "body": "<!-- 页面描述:$1 -->\r\n<template>\r\n</template>\r\n<script>\r\n    // import { mapGetters } from 'vuex';\r\n    export default {\r\n        name: \"${2:name}\",\r\n        //对外获取的数据\r\n        props: {},\r\n        data() {\r\n            return {$3}\r\n        },\r\n        methods: {\r\n            //页面中用到的方法\r\n        },\r\n        created() {\r\n            // 创建组件实例时钩子函数\r\n        },\r\n        mounted() {\r\n            // 挂载到dom后的钩子函数\r\n        },\r\n        watch: {\r\n            //实时监控数据变化\r\n            // data(newValue, oldValue) {\r\n            // }\r\n        },\r\n        beforeRouteEnter(to, from, next) {\r\n            next(vm => {\r\n                // 每次进入页面之前进行的操作\r\n            });\r\n        },\r\n        //实时计算\r\n        computed: {\r\n            // ...mapGetters([\r\n            //     'departmentId'\r\n            // ])\r\n        },\r\n    }\r\n</script>\r\n<style scoped>\r\n</style>",
+    "description": "开始的组件生成部分"
+  },
+  "center": {
+    "prefix": "center-元素居中代码(兼容性好)➷➷➷♞",
+    "body": " <style>\r\n      .outer {\r\n        display: table;\r\n        position: absolute;\r\n        height: 100%;\r\n        width: 100%;\r\n      }\r\n      \r\n      .middle {\r\n        display: table-cell;\r\n        vertical-align: middle;\r\n      }\r\n      \r\n      .inner {\r\n        margin-left: auto;\r\n        margin-right: auto;\r\n        background: #2b2b2b;\r\n        color: #fff;\r\n        padding: 2rem;\r\n        max-width: 320px;\r\n      }\r\n    </style>\r\n    <div class=\"outer\">\r\n      <div class=\"middle\">\r\n        <div class=\"inner\">\r\n          <p>一个好的程序员应该是那种过单行线都要往两边看的人。</p>\r\n          <button value=\"add\" id=\"add\">增加内容</button>\r\n        </div>\r\n      </div>\r\n    </div>",
+    "description": "元素居中代码(兼容性好)"
+  },
+  "center-juzhong": {
+    "prefix": "center-元素居中代码(flex)➷➷➷♞",
+    "body": "<style>\r\n      html,\r\n      body {\r\n        height: 100%;\r\n      }\r\n      \r\n      .parent {\r\n        height: 100%;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        border: 2px dashed #f69c55;\r\n      }\r\n      \r\n      .child {\r\n        padding: 20px;\r\n        background: black;\r\n        color: #fff;\r\n      }\r\n    </style>\r\n    <div class=\"parent\">\r\n      <div class=\"child\">Facebook wasn't built in a day.</div>\r\n    </div>",
+    "description": "元素居中代码(flex布局)"
+  },
+  "popover": {
+    "prefix": ["popover-Element框架单个实例➷➷➷♞","pop-Element-单个➷➷➷♞"],
+    "body": "<el-popover placement=\"top\" width=\"160\" v-model=\"isShowPop\" ref=\"${1:delPop}\">\r\n  <p class=\"text-center\">${2:确定为此用户重置密码吗}?</p>\r\n  <div style=\"text-align: right; margin: 0\">\r\n    <el-button size=\"mini\" type=\"text\" @click=\"cancelPopClick\">取消</el-button>\r\n    <el-button type=\"primary\" size=\"mini\" @click=\"confirmPopClick\" :loading=\"${3:confirmLoading}\">确定</el-button>\r\n  </div>\r\n  <span slot=\"reference\"></span>\r\n</el-popover>\r\n<script>\r\n  export default {\r\n    data() {\r\n      return {\r\n        // ■■■■■■■■■■■■■以下内容需要复制■■■■■■■■■■■■■■■■■\r\n        isShowPop: false,\r\n        confirmLoading: false\r\n        // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\r\n      };\r\n    },\r\n    methods: {\r\n      // ■■■■■■■■■■■■■以下内容需要复制■■■■■■■■■■■■■■■■■\r\n      /**\r\n       * NOTE \r\n       * 显示当前的popover\r\n       * @returns \r\n       */\r\n      resetClick({\r\n        target\r\n      }, row) {\r\n        this.currentResetId = row.id; //TODO 修改当前要操作的ID\r\n        //loading改为false popover显示设置为true\r\n        this.confirmLoading = false;\r\n        this.isShowPop = true;\r\n        this.$$nextTick(() => {\r\n          let pop = this.$$refs.${1: delPop};\r\n          // 计算当前的位置\r\n          if (pop.popperJS) {\r\n            pop.popperJS._reference = target;\r\n            pop.popperJS.state.position = pop.popperJS._getPosition(pop.popperJS._popper, pop.popperJS._reference);\r\n            pop.popperJS.update();\r\n          } else {\r\n            console.error(\"popover实例未找到!\");\r\n          }\r\n        })\r\n      },\r\n      /**\r\n       * NOTE \r\n       * 点击取消按钮 \r\n       * @returns \r\n       */\r\n      cancelPopClick() {\r\n        this.isShowPop = false;\r\n      },\r\n      /**\r\n       * NOTE\r\n       * 确定按钮操作 \r\n       * @returns \r\n       */\r\n      confirmPopClick() {\r\n        let id = this.currentResetId; //TODO 修改当前要操作的ID\r\n        this.confirmLoading = true;\r\n        this.$$post(`TODOURL`, {\r\n          id\r\n        }).then(data => {\r\n          if (data.success) {\r\n            this.$$message({\r\n              message: '操作成功!',\r\n              type: 'success'\r\n            });\r\n            //TODO 是否需要重新获取列表\r\n          } else {\r\n            this.$$message({\r\n              message: data.bean.message || '删除失败,请重试！',\r\n              type: 'error'\r\n            });\r\n          }\r\n        }).catch(() => {\r\n          this.$$message({\r\n            message: \"请求服务失败,请重试！\",\r\n            type: 'error'\r\n          });\r\n        }).finally(() => {\r\n          this.isShowPop = false;\r\n          this.confirmLoading = false;\r\n        })\r\n      },\r\n    }\r\n  }\r\n</script>",
+    "description": "popover-Element框架单个实例➷➷➷♞"
+  }
+}

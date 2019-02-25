@@ -1,0 +1,111 @@
+{
+/*
+	// Place your snippets for JavaScript React here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+
+  /*
+  :::'###::::'##::: ##::'######:::'##::::'##:'##::::::::::'###::::'########::::::::'##::'######::
+  ::'## ##::: ###:: ##:'##... ##:: ##:::: ##: ##:::::::::'## ##::: ##.... ##::::::: ##:'##... ##:
+  :'##:. ##:: ####: ##: ##:::..::: ##:::: ##: ##::::::::'##:. ##:: ##:::: ##::::::: ##: ##:::..::
+  '##:::. ##: ## ## ##: ##::'####: ##:::: ##: ##:::::::'##:::. ##: ########:::::::: ##:. ######::
+   #########: ##. ####: ##::: ##:: ##:::: ##: ##::::::: #########: ##.. ##:::'##::: ##::..... ##:
+   ##.... ##: ##:. ###: ##::: ##:: ##:::: ##: ##::::::: ##.... ##: ##::. ##:: ##::: ##:'##::: ##:
+   ##:::: ##: ##::. ##:. ######:::. #######:: ########: ##:::: ##: ##:::. ##:. ######::. ######::
+  ..:::::..::..::::..:::......:::::.......:::........::..:::::..::..:::::..:::......::::......:::
+  */
+  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+  "$httpget": {
+    "prefix": "httpget-scope 声明ANjs区域 ➷➷➷♞",
+    "body": [
+      "//全局变量  请求的参数\r\nvar params = \"\";\r\nvar app = angular.module('myApp', []);\r\napp.controller('customersCtrl', function($$scope, $$http) {\r\n  //分页方法声明\r\n  var pageing = function(pageindex, params) {\r\n    // 需要修改部分 请求的参数和地址\r\n    var url = BasicUrl + \"prescription?\" + params + \"page=\" + pageindex + \"&pageNum=10\";\r\n    $$http.get(url).success(function(data) {\r\n      if (data != null && data != \"\" && data != \"null\") {\r\n        //修改数组字段名称\r\n        $scope.dataLengths = data.content.length > 0;\r\n        if (data.content != null && data.content.length > 0) {\r\n          //赋值操作\r\n          $scope.data = data;\r\n          $scope.totalPage = data.totalPages; //总页数\r\n          $scope.totalRecord = data.totalElements; //总记录数\r\n          $scope.title = 'name'; //排序字段\r\n          $scope.desc = 0; //排序方式（默认升序）\r\n          //调用生成分页方法\r\n          initPageDiv($(\"#alreadyPage\"), pageindex + 1, data.totalPages, 5, $(\"#currentPage\"),\r\n            function() {\r\n              pageing($(\"#currentPage\").val() - 1, params);\r\n            });\r\n        } else {\r\n          //未获取到信息提示\r\n          tool.alert(\"提示\", \"当前条件下未获取到信息!\");\r\n        }\r\n      }\r\n    }).error(function(data, status, headers, config) {\r\n      //处理错误  \r\n      tool.alert(\"提示\", \"请求出错,请重试!\");\r\n    });\r\n  }\r\n  //调用分页方法\r\n  pageing(0, params);\r\n  //↓↓↓↓↓↓↓↓↓↓↓↓↓在此处添加其他方法↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓\r\n\r\n\r\n});"
+    ],
+    "description": "ANGULARJS $http 获取数据方法"
+  },
+
+  "Angularjs 跳页方法": {
+    "prefix": "skip-scope ➷➷➷♞",
+    "body": [
+      "//跳转至某页方法\r\n$scope.skip = function() {\r\n  if ($scope.toPageValue <= 1) {\r\n    $scope.toPageValue = 1;\r\n  } else if ($scope.toPageValue > $scope.totalPage) {\r\n    $scope.toPageValue = $scope.totalPage;\r\n  }\r\n  pageing($scope.toPageValue - 1, params);\r\n}"
+    ],
+    "description": "Angularjs 跳页方法"
+  },
+  "Angularjs 从数组中获取某个ID下的详情": {
+    "prefix": "getmodel-从数组中获取某个ID下的详情 ➷➷➷♞",
+    "body": [
+      "//点击表格内处方名称链接操作\r\n      $$scope.getEditModel = function(id) {\r\n        $$scope.isSave = false;\r\n        $('#modal').modal('show');\r\n        var arr = $$scope.data.content;\r\n        arr.forEach(function(element, index, array) {\r\n          var obj = element;\r\n          if (element.id == id) {\r\n            $$scope.model = {\r\n              id: id,\r\n              name: element.name,\r\n              spell: element.spell,\r\n              prescriptionType: element.prescriptionType,\r\n              description: element.description,\r\n            };\r\n          }\r\n        }, this);\r\n      }"
+    ],
+    "description": "从数组中获取某个ID下的详情"
+  },
+
+  "Angularjs查询,搜索按钮方法": {
+    "prefix": "search-scope ➷➷➷♞",
+    "body": [
+      "//查询按钮\r\n$$scope.search = function() {\r\n  var type = $(\"#selector1\").val(); //搜索字段的值\r\n  var name = $(\"#selector2\").val(); //搜索字段的值 \r\n  params = \"\"; //初始化查询条件\r\n  if (!(name || type)) {\r\n    tool.alert(\"提示\", \"请至少输入一个搜索条件\");\r\n    return false;\r\n  }\r\n  params = \"\";\r\n  if (type) {\r\n    params = \"prescriptionType=\" + type + \"&\";\r\n  }\r\n  if (name) {\r\n    params += \"name=\" + name + \"&\";\r\n  }\r\n  pageing(0, params);\r\n}"
+    ],
+    "description": "Angularjs搜索方法"
+  },
+
+  "Angularjs 表格排序方法": {
+    "prefix": "sort-scope ➷➷➷♞",
+    "body": [
+      "//排序方法\r\n$scope.sort = function(ziduan) {\r\n  var classname = '';\r\n  if ($scope.desc) {\r\n    classname = 'glyphicon glyphicon-arrow-down';\r\n  } else {\r\n    classname = 'glyphicon glyphicon-arrow-up';\r\n  }\r\n  $(\"[data-order]\").find('span').addClass('glyphicon glyphicon-sort');\r\n  $(\"[data-order='\" + ziduan + \"']\").find('span').removeClass().addClass(classname);\r\n}"
+    ],
+    "description": "Angularjs 表格排序方法"
+  },
+
+  "Angularjs-$http方法": {
+    "prefix": "httppost-$http POST请求方法 ➷➷➷♞",
+    "body": [
+      "var dataInfo = {\r\n            id: checkId,\r\n            itemId: itemId,\r\n            val: val\r\n          }\r\n          $$http({\r\n              method: 'POST', //TODO修改地址\r\n              url: BasicUrl + \"inspection/\" + checkId + \"/data\",\r\n              data: dataInfo,\r\n              transformRequest: function(obj) {\r\n                var str = [];\r\n                for (var p in obj) {\r\n                  str.push(encodeURIComponent(p) + \"=\" + encodeURIComponent(obj[p]));\r\n                }\r\n                return str.join(\"&\");\r\n              },\r\n              headers: {\r\n                'Content-Type': 'application/x-www-form-urlencoded'\r\n              },\r\n            })\r\n            .success(function(data, xhr) {\r\n              if (xhr == 200) {\r\n                if (data.errorMessage) {\r\n                  tool.alert(\"提示\", data.errorMessage);\r\n                } else {\r\n                  tool.alert(\"提示\", \"保存成功!\");\r\n                }\r\n              } else {\r\n                tool.alert(\"提示\", \"保存失败,请重试!\");\r\n              }\r\n            }).error(function(response) {\r\n              if (response && response.errorMessage) {\r\n                tool.alert(\"提示\", response.errorMessage);\r\n              }\r\n            });"
+    ],
+    "description": "在Angularjs中的POST/PATCH请求方法"
+  },
+  "Angularjs-$httpGET方法": {
+    "prefix": "httpget-$http GET请求方法 ➷➷➷♞",
+    "body": [
+      "  $$http.get(BasicUrl + \"TODO/\" + id).success(function(data) {\r\n            if (data != null && data != \"\" && data != \"null\") {\r\n              //数据不为空\r\n              $scope.itemDetail = data; //TODO 修改\r\n            }\r\n          }).error(function() {\r\n            tool.alert(\"提示\", \"获取数据出错！\");\r\n          });"
+    ],
+    "description": "在Angularjs中的Get请求方法"
+  },
+  "Angularjs-页面加载完成方法": {
+    "prefix": "loaded ➷➷➷♞",
+    "body": [
+      "//加载完毕后再显示 \r\n $$scope.$$watch(\"$viewContentLoaded\", function() {\r\n        angular.element(\".myload\").removeClass(\"myload\");\r\n      });"
+    ],
+    "description": "页面加载完成方法"
+  },
+  "删除": {
+    "prefix": "bianji-angularjs➷➷➷♞",
+    "body": [
+      "//点击变为已完成\r\n        $scope.completeDemand = function(id) {\r\n          tool.confirm(\r\n            \"提示\",\r\n            \"是否更改为已完成？\",\r\n            function() {\r\n              //用户点击确认按钮时操作\r\n              $.ajax({\r\n                type: \"PATCH\",\r\n                url: BasicUrl + \"demand/\" + id,\r\n                data: {\r\n                  adminId: 1,\r\n                  id: id\r\n                },\r\n                dataType: \"json\",\r\n                error: function(response) {\r\n                  if (response && response.responseText && JSON.parse(response.responseText) && JSON.parse(response.responseText).errorMessage) {\r\n                    tool.alert(\"提示\", JSON.parse(response.responseText).errorMessage);\r\n                  }\r\n                },\r\n                complete: function(xhr, textStatus) {\r\n                  if (xhr.status == 200) {\r\n                    tool.alert(\"提示\", \"更改状态成功\", function() {\r\n                      //刷新当前页面.\r\n                      window.location.reload();\r\n                    });\r\n                  }\r\n                }\r\n              });\r\n            },\r\n            function() {\r\n              //用户点击取消按钮时操作\r\n            });\r\n        }"
+    ],
+    "description": "删除或编辑操作--Angularjs--马少博"
+  },
+  "获取参数 ": {
+    "prefix": "params-搜索参数格式 ➷➷➷♞",
+    "body": [
+      " params = '';\r\n        if (minExpiredAt) {\r\n          params += \"minAppointAt=\" + minExpiredAt + '&';;\r\n        }\r\n        if (maxExpiredAt) {\r\n          params += \"maxAppointAt=\" + maxExpiredAt + '&';\r\n        }\r\n        if (status) {\r\n          params += \"status=\" + status + '&';\r\n        }\r\n        if (sltItem) {\r\n          params += \"item=\" + sltItem + '&';\r\n        }\r\n        if (keyword) {\r\n          params += \"keyword=\" + keyword + '&';\r\n        }\r\n        pageing(0, params);"
+    ],
+    "description": "params-搜索参数格式"
+  },
+  "配置http ": {
+    "prefix": "httpconfig——统一配置http服务 ➷➷➷♞",
+    "body": [
+      "/**\r\n         * 配置http服务\r\n         * \r\n         */\r\n        app.config([\"$$httpProvider\", function($$httpProvider) {\r\n          $$httpProvider.defaults.headers.common[\"authorization\"] = headertoken();\r\n          console.log($$httpProvider.defaults.headers.common);\r\n        }]);"
+    ],
+    "description": "httpconfig-配置http服务"
+  },
+}
