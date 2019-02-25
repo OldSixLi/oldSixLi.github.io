@@ -1,0 +1,15 @@
+项目说明:
+1.整体项目基于mpvue创建,编译后生成/dist 文件夹下的文件,即为小程序部署时的文件。
+2.初次下载此项目,需配置相关环境
+  1)安装Nodejs
+  2)# 全局安装 vue-cli
+$ npm install --global vue-cli
+
+# 创建一个基于 mpvue-quickstart 模板的新项目
+$ vue init mpvue/mpvue-quickstart my-project
+
+# 安装依赖
+$ cd my-project
+$ npm install
+# 启动构建
+$ npm run dev
